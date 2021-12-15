@@ -1,0 +1,2 @@
+scoreboard objectives add killMe dummy
+execute if score @s timeAlive > @e[name=dmain,type=armor_stand,limit=1] killMe run scoreboard players operation @e[type=armor_stand,name=dmain] killMe = @s timeAlive

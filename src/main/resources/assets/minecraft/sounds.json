@@ -1,0 +1,173 @@
+{
+  "map.ambience.deepcave": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/deepcave",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.desert": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/desert",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.plane.crasheffect": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/plane/crasheffect",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.end": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/end",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.forestbirch": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/forestbirch",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.forestmain": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/forestmain",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.forestsnow": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/forestsnow",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.foresttaiga": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/foresttaiga",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.highlevelmountain": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/highlevelmountain",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.highlevelwoods": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/highlevelwoods",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.jungle": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/jungle",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.middleocean": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/middleocean",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.mountain": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/mountain",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.oceanwaves": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/oceanwaves",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.plains": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/plains",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.river": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/river",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.savanah": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/savanah",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.swamp": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/swamp",
+        "stream": true 
+      } 
+    ]
+  },
+  "map.ambience.tundra": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "custom/ambience/tundra",
+        "stream": true 
+      } 
+    ]
+  }
+}

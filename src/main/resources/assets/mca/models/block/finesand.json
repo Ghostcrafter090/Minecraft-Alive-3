@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mca:blocks/finesand",
+    "up": "mca:blocks/finesand",
+    "north": "mca:blocks/finesand",
+    "east": "mca:blocks/finesand",
+    "south": "mca:blocks/finesand",
+    "west": "mca:blocks/finesand",
+    "particle": "mca:blocks/finesand"
+  }
+}

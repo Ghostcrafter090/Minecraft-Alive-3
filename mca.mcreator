@@ -1,0 +1,196 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Humus",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "humus"
+    },
+    {
+      "name": "Loosegravel",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "loosegravel"
+    },
+    {
+      "name": "Finesand",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "finesand"
+    },
+    {
+      "name": "Redfinesand",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "redfinesand"
+    },
+    {
+      "name": "Humustodirt",
+      "type": "recipe",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "humustodirt"
+    },
+    {
+      "name": "Loosegraveltogravel",
+      "type": "recipe",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "loosegraveltogravel"
+    },
+    {
+      "name": "Finesandtosand",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "finesandtosand"
+    },
+    {
+      "name": "Redfinesandtoredsand",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "redfinesandtoredsand"
+    },
+    {
+      "name": "WaterKeyShard",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "water_key_shard"
+    },
+    {
+      "name": "WaterKey",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "water_key"
+    },
+    {
+      "name": "FireKeyShard",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_key_shard"
+    },
+    {
+      "name": "FireKey",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_key"
+    },
+    {
+      "name": "DefunctEndKey",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "defunct_end_key"
+    },
+    {
+      "name": "EndKey",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_key"
+    },
+    {
+      "name": "Telaranrhoid",
+      "type": "dimension",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "telaranrhoid",
+      "metadata": {
+        "ep": false
+      }
+    },
+    {
+      "name": "Theways",
+      "type": "dimension",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "theways",
+      "metadata": {
+        "ep": false
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.mca.water_key_shard": "Water Key Shard",
+      "item.mca.water_key": "Water Key",
+      "item.mca.defunct_end_key": "Defunct End Key",
+      "item.mca.end_key": "End Key",
+      "block.mca.humus": "Humus",
+      "item.mca.theways": "Theways Portal Igniter",
+      "block.mca.loosegravel": "Loose Gravel",
+      "block.mca.finesand": "Fine Sand",
+      "block.mca.redfinesand": "Red Fine Sand",
+      "item.mca.telaranrhoid": "Telaranrhoid Portal Igniter",
+      "item.mca.fire_key_shard": "Fire Key Shard",
+      "item.mca.fire_key": "Fire Key"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "mca",
+    "modName": "Minecraft Alive 2",
+    "version": "1.0.0",
+    "author": "joshp, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.17.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.mca",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100349312
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mca:blocks/humus",
+    "up": "mca:blocks/humus",
+    "north": "mca:blocks/humus",
+    "east": "mca:blocks/humus",
+    "south": "mca:blocks/humus",
+    "west": "mca:blocks/humus",
+    "particle": "mca:blocks/humus"
+  }
+}

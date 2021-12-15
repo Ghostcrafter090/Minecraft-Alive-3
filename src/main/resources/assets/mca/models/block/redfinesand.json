@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mca:blocks/redfinesand",
+    "up": "mca:blocks/redfinesand",
+    "north": "mca:blocks/redfinesand",
+    "east": "mca:blocks/redfinesand",
+    "south": "mca:blocks/redfinesand",
+    "west": "mca:blocks/redfinesand",
+    "particle": "mca:blocks/redfinesand"
+  }
+}
