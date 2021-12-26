@@ -1,4 +1,4 @@
-execute as @e[tag=blight,limit=1,sort=random] at @s as @e[distance=0..15] at @s unless entity @s[tag=blight] unless entity @s[type=armor_stand] unless entity @s[tag=sawayig] unless entity @s[scores={airtic=1..1}] run function world:blight/infect
+execute as @e[tag=blight,limit=1,sort=random] at @s as @e[distance=0..15] at @s unless entity @s[tag=blight] unless entity @s[type=marker] unless entity @s[tag=sawayig] unless entity @s[scores={airtic=1..1}] run function world:blight/infect
 execute at @e[tag=blight,limit=1,sort=random] unless block ~ ~-1 ~ minecraft:mycelium run fill ~1 ~10 ~1 ~-1 ~-2 ~-1 minecraft:dead_bubble_coral[waterlogged=false] replace fern
 execute at @e[tag=blight,limit=1,sort=random] unless block ~ ~-1 ~ minecraft:mycelium run fill ~1 ~10 ~1 ~-1 ~-2 ~-1 minecraft:dead_bubble_coral[waterlogged=false] replace minecraft:dead_bubble_coral[waterlogged=true]
 execute at @e[tag=blight,limit=1,sort=random] unless block ~ ~-1 ~ minecraft:mycelium run fill ~1 ~10 ~1 ~-1 ~-1 ~-1 minecraft:dead_fire_coral[waterlogged=false] replace large_fern

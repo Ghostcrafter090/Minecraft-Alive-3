@@ -1,5 +1,5 @@
 scoreboard objectives add td dummy
-execute as @a at @s unless entity @e[name=derp,distance=0..120] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"derp"}',Tags:["mina"]}
+execute as @a at @s unless entity @e[name=derp,distance=0..120] run summon minecraft:marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"derp"}',Tags:["mina"]}
 execute as @e[name=derp,scores={td=1..6}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ grass replace
 execute as @e[name=derp,scores={td=7..7}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ fern replace
 execute as @e[name=derp,scores={td=8..8}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ large_fern replace

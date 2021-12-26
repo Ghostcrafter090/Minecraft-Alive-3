@@ -23,7 +23,7 @@ scoreboard objectives add wtdummytic dummy
 # Main
 scoreboard players add @e[name=dmain] storm_clk 1
 execute as @e[name=storm] unless entity @s[scores={wt_done=110..}] run scoreboard players add @s wt_done 1
-execute if entity @e[name=dmain,scores={storm_clk=1000..}] run summon armor_stand 0 100 0 {CustomNameVisible:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"storm"}'}
+execute if entity @e[name=dmain,scores={storm_clk=1000..}] run summon marker 0 100 0 {CustomNameVisible:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"storm"}'}
 execute as @e[name=storm] if entity @s[scores={wt_done=10..10}] run scoreboard players set @s storm_inta 5291
 execute as @e[name=storm] if entity @s[scores={wt_done=10..10}] run scoreboard players set @s storm_intb 214748360
 execute as @e[name=storm] if entity @s[scores={wt_done=20..20}] run scoreboard players operation @s storm_posx = @r random

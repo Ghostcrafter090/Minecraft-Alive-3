@@ -3,61 +3,90 @@ scoreboard objectives add mobscrolltic dummy
 
 # Main
 execute at @a run tag @e[type=item,distance=0..20] add playerfound
-execute if entity @e[name=dmain,scores={mobscrolltic=0..0}] run function world:lagcontrol/mobs/all
-execute if entity @e[name=dmain,scores={mobscrolltic=1..1}] run function world:lagcontrol/mobs/arrow
-execute if entity @e[name=dmain,scores={mobscrolltic=2..2}] run function world:lagcontrol/mobs/ar_ef_cl
-execute if entity @e[name=dmain,scores={mobscrolltic=3..3}] run function world:lagcontrol/mobs/blight
-execute if entity @e[name=dmain,scores={mobscrolltic=4..4}] run function world:lagcontrol/mobs/cave_spider
-execute if entity @e[name=dmain,scores={mobscrolltic=5..5}] run function world:lagcontrol/mobs/cod
-execute if entity @e[name=dmain,scores={mobscrolltic=6..6}] run function world:lagcontrol/mobs/drag_fire
-execute if entity @e[name=dmain,scores={mobscrolltic=7..7}] run function world:lagcontrol/mobs/egg
-execute if entity @e[name=dmain,scores={mobscrolltic=8..8}] run function world:lagcontrol/mobs/enderman
-execute if entity @e[name=dmain,scores={mobscrolltic=9..9}] run function world:lagcontrol/mobs/endermite
-execute if entity @e[name=dmain,scores={mobscrolltic=10..10}] run function world:lagcontrol/mobs/ender_pearl
-execute if entity @e[name=dmain,scores={mobscrolltic=11..11}] run function world:lagcontrol/mobs/evoker
-execute if entity @e[name=dmain,scores={mobscrolltic=12..12}] run function world:lagcontrol/mobs/evoker_fangs
-execute if entity @e[name=dmain,scores={mobscrolltic=13..13}] run function world:lagcontrol/mobs/exper_bot
-execute if entity @e[name=dmain,scores={mobscrolltic=14..14}] run function world:lagcontrol/mobs/exper_orb
-execute if entity @e[name=dmain,scores={mobscrolltic=15..15}] run function world:lagcontrol/mobs/eye_of_end
-execute if entity @e[name=dmain,scores={mobscrolltic=16..16}] run function world:lagcontrol/mobs/falling_bl
-execute if entity @e[name=dmain,scores={mobscrolltic=17..17}] run function world:lagcontrol/mobs/fireball
-execute if entity @e[name=dmain,scores={mobscrolltic=18..18}] run function world:lagcontrol/mobs/fish_bob
-execute if entity @e[name=dmain,scores={mobscrolltic=19..19}] run function world:lagcontrol/mobs/hoglin
-execute if entity @e[name=dmain,scores={mobscrolltic=19..19}] run function world:lagcontrol/mobs/horse
-execute if entity @e[name=dmain,scores={mobscrolltic=20..20}] run function world:lagcontrol/mobs/illusioner
-execute if entity @e[name=dmain,scores={mobscrolltic=21..21}] run function world:lagcontrol/mobs/item
-execute if entity @e[name=dmain,scores={mobscrolltic=22..22}] run function world:lagcontrol/mobs/llama_spit
-execute if entity @e[name=dmain,scores={mobscrolltic=23..23}] run function world:lagcontrol/mobs/machin_shin
-execute if entity @e[name=dmain,scores={mobscrolltic=24..24}] run function world:lagcontrol/mobs/magma_cube
-execute if entity @e[name=dmain,scores={mobscrolltic=25..25}] run function world:lagcontrol/mobs/moblist
-execute if entity @e[name=dmain,scores={mobscrolltic=26..26}] run function world:lagcontrol/mobs/moria
-execute if entity @e[name=dmain,scores={mobscrolltic=27..27}] run function world:lagcontrol/mobs/phantom
-execute if entity @e[name=dmain,scores={mobscrolltic=28..28}] run function world:lagcontrol/mobs/pig
-execute if entity @e[name=dmain,scores={mobscrolltic=29..29}] run function world:lagcontrol/mobs/piglin
-execute if entity @e[name=dmain,scores={mobscrolltic=30..30}] run function world:lagcontrol/mobs/piglin_brute
-execute if entity @e[name=dmain,scores={mobscrolltic=31..31}] run function world:lagcontrol/mobs/potion
-execute if entity @e[name=dmain,scores={mobscrolltic=32..32}] run function world:lagcontrol/mobs/pufferfish
-execute if entity @e[name=dmain,scores={mobscrolltic=33..33}] run function world:lagcontrol/mobs/salmon
-execute if entity @e[name=dmain,scores={mobscrolltic=34..34}] run function world:lagcontrol/mobs/sawayig
-execute if entity @e[name=dmain,scores={mobscrolltic=35..35}] run function world:lagcontrol/mobs/shulker
-execute if entity @e[name=dmain,scores={mobscrolltic=36..36}] run function world:lagcontrol/mobs/shu_bul
-execute if entity @e[name=dmain,scores={mobscrolltic=37..37}] run function world:lagcontrol/mobs/silverfish
-execute if entity @e[name=dmain,scores={mobscrolltic=38..38}] run function world:lagcontrol/mobs/skeleton
-execute if entity @e[name=dmain,scores={mobscrolltic=39..39}] run function world:lagcontrol/mobs/slime
-execute if entity @e[name=dmain,scores={mobscrolltic=39..39}] run function world:lagcontrol/mobs/sheep
-execute if entity @e[name=dmain,scores={mobscrolltic=40..40}] run function world:lagcontrol/mobs/smal_fire
-execute if entity @e[name=dmain,scores={mobscrolltic=41..41}] run function world:lagcontrol/mobs/snowball
-execute if entity @e[name=dmain,scores={mobscrolltic=42..42}] run function world:lagcontrol/mobs/spec_ar
-execute if entity @e[name=dmain,scores={mobscrolltic=43..43}] run function world:lagcontrol/mobs/spider
-execute if entity @e[name=dmain,scores={mobscrolltic=44..44}] run function world:lagcontrol/mobs/storm
-execute if entity @e[name=dmain,scores={mobscrolltic=45..45}] run function world:lagcontrol/mobs/stray
-execute if entity @e[name=dmain,scores={mobscrolltic=46..46}] run function world:lagcontrol/mobs/vex
-execute if entity @e[name=dmain,scores={mobscrolltic=47..47}] run function world:lagcontrol/mobs/vindicator
-execute if entity @e[name=dmain,scores={mobscrolltic=48..48}] run function world:lagcontrol/mobs/witch
-execute if entity @e[name=dmain,scores={mobscrolltic=49..49}] run function world:lagcontrol/mobs/with_skul
-execute if entity @e[name=dmain,scores={mobscrolltic=50..50}] run function world:lagcontrol/mobs/zoglin
-execute if entity @e[name=dmain,scores={mobscrolltic=51..51}] run function world:lagcontrol/mobs/zombie
-execute if entity @e[name=dmain,scores={mobscrolltic=52..52}] run function world:lagcontrol/mobs/zom_pig
+execute as @e[type=arrow,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=minecraft:area_effect_cloud,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[tag=blight,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[tag=machin_shin,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[tag=sawayig,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=cave_spider,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=cow,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=chicken,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=cod,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=dragon_fireball,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=egg,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=enderman,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=endermite,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=ender_pearl,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=evoker,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=evoker_fangs,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=experience_bottle,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=experience_orb,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=eye_of_ender,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=falling_block,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=fireball,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=fishing_bobber,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=hoglin,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=horse,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=illusioner,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=item,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=llama_spit,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=magma_cube,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=phantom,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=pig,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=piglin,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=piglin_brute,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=potion,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=pufferfish,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=bee,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=wolf,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=salmon,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=shulker,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=minecraft:shulker_bullet,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=silverfish,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=skeleton,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=slime,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=sheep,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=small_fireball,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=snowball,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=spectral_arrow,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=spider,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=stray,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=vex,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=vindicator,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=witch,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=wither_skull,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=zoglin,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=zombie,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[scores={airfill=1..1},tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+execute as @e[type=wolf,tag=!lagcontrol] unless data entity @s Owner run tag @s add lagcontrol
+execute as @e[type=wolf,tag=lagcontrol] if data entity @s Owner run tag @s remove lagcontrol
+execute as @e[type=minecraft:zombified_piglin,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+
+scoreboard objectives add kill_ent dummy
+scoreboard objectives add kill_max dummy
+execute unless entity @e[name=dmain,scores={kill_max=0..}] run scoreboard players set @e[name=dmain] kill_max 200
+execute store result score @e[name=dmain] kill_ent if entity @e[tag=lagcontrol]
+scoreboard players operation @e[name=dmain] kill_ent -= @e[name=dmain] kill_max
+execute if entity @e[name=dmain,scores={kill_ent=1..}] run kill @e[tag=lagcontrol,limit=20,sort=random]
+execute if entity @e[name=dmain,scores={kill_ent=1..}] run say [Minecraft Alive] - Max killable entities detected. Clearing...
+
+scoreboard objectives add moria_ent dummy
+scoreboard objectives add moria_max dummy
+execute unless entity @e[name=dmain,scores={moria_max=0..}] run scoreboard players set @e[name=dmain] moria_max 8
+execute store result score @e[name=dmain] moria_ent if entity @e[scores={airfill=1..1}]
+scoreboard players operation @e[name=dmain] moria_ent -= @e[name=dmain] moria_max
+execute if entity @e[name=dmain,scores={moria_ent=1..}] run kill @e[scores={airfill=1..1},limit=4,sort=random]
+execute if entity @e[name=dmain,scores={moria_ent=1..}] run say [Minecraft Alive] - Max moria entities detected. Clearing...
+
+scoreboard objectives add all_ent dummy 
+scoreboard objectives add all_max dummy 
+execute unless entity @e[name=dmain,scores={all_max=0..}] run scoreboard players set @e[name=dmain] all_max 400
+execute store result score @e[name=dmain] all_ent if entity @e
+scoreboard players operation @e[name=dmain] all_ent -= @e[name=dmain] all_max 
+execute if entity @e[name=dmain,scores={all_ent=1..}] run forceload remove all
+# execute if entity @e[name=dmain,scores={all_ent=1..}] as @e[name=waygate] unless entity @s[scores={waygatedone=1..1}] run kill @s
+# execute if entity @e[name=dmain,scores={all_ent=1..}] run say [Minecraft Alive] - Max Entity Count Reached. Resetting ForceLoadedChunks...
+
 function world:lagcontrol/mobs/item
 
 # Ticker

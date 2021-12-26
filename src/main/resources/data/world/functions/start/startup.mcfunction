@@ -12,7 +12,7 @@ execute if entity @e[name=dmain,scores={firststart=1..1}] run scoreboard players
 execute unless entity @e[name=dmain,scores={firststart=1..2}] if entity @e[name=dmain,scores={starttime=20..20}] run scoreboard players set @a firststart 1
 execute if entity @a[scores={death2=1..}] run stopsound @a
 execute if entity @a[scores={death2=1..}] run scoreboard players set @a death2 0
-# execute if entity @e[name=dmain,scores={starttime=2..2}] as @e[type=!player] unless entity @s[type=armor_stand] run kill @s
+# execute if entity @e[name=dmain,scores={starttime=2..2}] as @e[type=!player] unless entity @s[type=marker] run kill @s
 execute if entity @e[name=dmain,scores={starttime=2..2}] run setworldspawn -103 226 128
 execute if entity @e[name=dmain,scores={starttime=11..11}] positioned -83.65 240 105.635 run playsound map.plane.crasheffect master @a ~ ~ ~ 1
 execute if entity @e[name=dmain,scores={starttime=10..10}] run tp @a -83.65 240 105.635

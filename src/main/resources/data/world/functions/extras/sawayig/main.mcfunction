@@ -10,7 +10,7 @@ scoreboard objectives add regulatef dummy
 scoreboard players add @a regulatef 1
 scoreboard objectives add regulateg dummy
 scoreboard players add @e[name=dmain] regulateg 1
-execute as @a at @s unless entity @e[name=Gravestone1,distance=0..35] run summon minecraft:armor_stand ~ ~ ~ {Silent:1b,CustomNameVisible:0b,NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"Gravestone1"}'}
+execute as @a at @s unless entity @e[name=Gravestone1,distance=0..35] run summon minecraft:marker ~ ~ ~ {Silent:1b,CustomNameVisible:0b,NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"Gravestone1"}'}
 execute if entity @a[scores={regulatef=600..}] run kill @e[name=Gravestone1]
 execute if entity @a[scores={regulatef=601..}] run scoreboard players set @a regulatef 0
 execute if entity @e[name=dmain,scores={regulateg=51..}] run scoreboard players set @e[name=dmain] regulateg 0

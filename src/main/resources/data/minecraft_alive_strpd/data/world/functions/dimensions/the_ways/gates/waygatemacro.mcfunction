@@ -228,4 +228,4 @@ execute in the_ways:the_ways if entity @s[scores={waygatemake=111..111}] run fil
 execute in the_ways:the_ways if entity @s[scores={waygatemake=112..112}] run fill ~5 ~2 ~-1 ~5 ~2 ~-1 stone_bricks  
 execute in the_ways:the_ways if entity @s[scores={waygatemake=113..113}] run fill ~5 ~1 ~1 ~5 ~1 ~1 stone_brick_stairs[half=top]  
 execute in the_ways:the_ways if entity @s[scores={waygatemake=114..114}] run fill ~5 ~1 ~1 ~5 ~1 ~1 stone_brick_stairs[half=top,facing=south]  
-execute in the_ways:the_ways if entity @s[scores={waygatemake=114..114}] run summon armor_stand ~ ~ ~ {CustomNameVisible:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,CustomName:'{"text":"waywaygate"}'}
+execute in the_ways:the_ways if entity @s[scores={waygatemake=114..114}] run summon marker ~ ~ ~ {CustomNameVisible:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,CustomName:'{"text":"waywaygate"}'}

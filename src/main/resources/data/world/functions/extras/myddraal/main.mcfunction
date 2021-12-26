@@ -53,7 +53,7 @@ execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,di
 execute as @e[type=wither_skeleton,tag=Myddraal] at @s run particle minecraft:crimson_spore ~ ~ ~ 1 1 1 1 100 force
 
 # Death Effects
-execute as @e[type=armor_stand,name=deathdetect] at @s unless entity @e[type=wither_skeleton,tag=Myddraal,distance=0..2] run function world:extras/myddraal/death
+execute as @e[type=marker,name=deathdetect] at @s unless entity @e[type=wither_skeleton,tag=Myddraal,distance=0..2] run function world:extras/myddraal/death
 
 # Spawnning
 function world:extras/myddraal/spawn

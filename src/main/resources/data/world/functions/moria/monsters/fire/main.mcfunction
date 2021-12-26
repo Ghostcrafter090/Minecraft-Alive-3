@@ -18,7 +18,7 @@ effect give @e[type=!item,type=!falling_block,tag=airfill,sort=random,limit=1] m
 effect give @e[type=!item,type=!falling_block,scores={airfill=1..1},tag=!airfill,sort=random,limit=1] minecraft:resistance 100000 2
 
 # Spread
-execute as @e[type=!item,type=!falling_block,scores={airfill=1..1},sort=random,limit=1] at @s as @e[type=!item,type=!falling_block,distance=0..12] unless entity @s[scores={airfill=1..1}] unless entity @s[type=player] unless entity @s[type=item] unless entity @s[type=falling_block] unless entity @s[type=armor_stand] unless entity @s[type=item_frame] run scoreboard players set @s airfill 1
+execute as @e[type=!item,type=!falling_block,scores={airfill=1..1},sort=random,limit=1] at @s as @e[type=!item,type=!falling_block,distance=0..12] unless entity @s[scores={airfill=1..1}] unless entity @s[type=player] unless entity @s[type=item] unless entity @s[type=falling_block] unless entity @s[type=marker] unless entity @s[type=item_frame] run scoreboard players set @s airfill 1
 
 #Main
 execute if entity @a[scores={regu=15..15}] run effect give @e[type=!item,type=!falling_block,scores={airfill=1..1}] minecraft:water_breathing 1000000 5

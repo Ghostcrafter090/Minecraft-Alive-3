@@ -17,7 +17,7 @@ scoreboard objectives add pigmenmad dummy
 # Main
 scoreboard players add @e[name=dmain] machin_shin_clk 1
 execute as @e[name=machin_shin] unless entity @s[scores={ms_done=11..}] run scoreboard players add @s ms_done 1
-execute if entity @e[name=dmain,scores={machin_shin_clk=3000..}] run summon armor_stand 0 100 0 {CustomNameVisible:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"machin_shin"}'}
+execute if entity @e[name=dmain,scores={machin_shin_clk=3000..}] run summon marker 0 100 0 {CustomNameVisible:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"machin_shin"}'}
 execute as @e[name=machin_shin] if entity @s[scores={ms_done=1..1}] run scoreboard players set @s machin_shin_inta 2291
 execute as @e[name=machin_shin] if entity @s[scores={ms_done=1..1}] run scoreboard players set @s machin_shin_intb 21474836
 execute as @e[name=machin_shin] if entity @s[scores={ms_done=2..2}] run scoreboard players operation @s machin_shin_posx = @r random
@@ -40,7 +40,7 @@ execute as @e[name=dmain,scores={ms_effect_clock=2..}] run scoreboard players se
 # Pigmen
 scoreboard players add @e[name=dmain] pigmenmad 1
 # execute in the_ways:the_ways if entity @e[name=dmain,scores={pigmenmad=202..202}] as @e[type=minecraft:zombified_piglin,distance=0..] run data modify entity @s AngerTime set value 1000
-execute in the_ways:the_ways if entity @e[name=dmain,scores={pigmenmad=203..203}] as @e[type=minecraft:zombified_piglin,distance=0..] at @s at @e[distance=1..,limit=1,sort=nearest] unless entity @e[distance=..1,type=armor_stand] unless entity @e[distance=..1,type=item] run data modify entity @s AngryAt set from entity @e[type=!item,distance=..1,limit=1,sort=nearest] UUID
+execute in the_ways:the_ways if entity @e[name=dmain,scores={pigmenmad=203..203}] as @e[type=minecraft:zombified_piglin,distance=0..] at @s at @e[distance=1..,limit=1,sort=nearest] unless entity @e[distance=..1,type=marker] unless entity @e[distance=..1,type=item] run data modify entity @s AngryAt set from entity @e[type=!item,distance=..1,limit=1,sort=nearest] UUID
 execute if entity @e[name=dmain,scores={pigmenmad=203..}] run scoreboard players set @e[name=dmain] pigmenmad 0
 
 # Waygates

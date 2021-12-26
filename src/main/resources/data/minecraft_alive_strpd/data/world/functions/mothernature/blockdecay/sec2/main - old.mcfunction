@@ -2,10 +2,10 @@ function world:lagcontrol/moblag
 scoreboard objectives add ent dummy
 scoreboard objectives add entd dummy
 scoreboard players add @e[name=dmain] entd 1
-execute as @e[name=dmain,scores={entd=2..2}] as @e[type=armor_stand,tag=mina] run scoreboard players add @e[name=dmain] ent 1
-execute as @e[name=dmain,scores={entd=2..2}] as @e[type=armor_stand,tag=vil] run scoreboard players add @e[name=dmain] ent 1
-execute as @e[name=dmain,scores={entd=3..3}] if entity @e[name=dmain,scores={ent=13..}] run kill @e[type=armor_stand,tag=mina]
-execute as @e[name=dmain,scores={entd=3..3}] if entity @e[name=dmain,scores={ent=13..}] run kill @e[type=armor_stand,tag=vil]
+execute as @e[name=dmain,scores={entd=2..2}] as @e[type=marker,tag=mina] run scoreboard players add @e[name=dmain] ent 1
+execute as @e[name=dmain,scores={entd=2..2}] as @e[type=marker,tag=vil] run scoreboard players add @e[name=dmain] ent 1
+execute as @e[name=dmain,scores={entd=3..3}] if entity @e[name=dmain,scores={ent=13..}] run kill @e[type=marker,tag=mina]
+execute as @e[name=dmain,scores={entd=3..3}] if entity @e[name=dmain,scores={ent=13..}] run kill @e[type=marker,tag=vil]
 execute as @e[name=dmain,scores={entd=5..5}] run scoreboard players set @e[name=dmain] entd 0
 execute as @e[name=dmain,scores={entd=4..4}] run scoreboard players set @e[name=dmain] ent 0
 execute if entity @e[name=dmain,scores={entd=3..3}] if entity @e[name=dmain,scores={ent=30..}] run say [Minecraft Alive] - Warning: Max Activity Detected. Killing 13+ entities...

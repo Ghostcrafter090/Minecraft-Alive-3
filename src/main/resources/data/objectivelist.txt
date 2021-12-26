@@ -416,8 +416,8 @@ minecraft_alive_strpd\data\world\functions\grabentity.mcfunction:execute if enti
 minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec1\main.mcfunction:scoreboard players add @e[name=derp] td 1
 minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec1\main.mcfunction:scoreboard players add @a regulate 1
 minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec2\main - old.mcfunction:scoreboard players add @e[name=dmain] entd 1
-minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec2\main - old.mcfunction:execute as @e[name=dmain,scores={entd=2..2}] as @e[type=armor_stand,tag=mina] run scoreboard players add @e[name=dmain] ent 1
-minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec2\main - old.mcfunction:execute as @e[name=dmain,scores={entd=2..2}] as @e[type=armor_stand,tag=vil] run scoreboard players add @e[name=dmain] ent 1
+minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec2\main - old.mcfunction:execute as @e[name=dmain,scores={entd=2..2}] as @e[type=marker,tag=mina] run scoreboard players add @e[name=dmain] ent 1
+minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec2\main - old.mcfunction:execute as @e[name=dmain,scores={entd=2..2}] as @e[type=marker,tag=vil] run scoreboard players add @e[name=dmain] ent 1
 minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec2\main - old.mcfunction:scoreboard players add @e[name=dmain] entad 1
 minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec2\main - old.mcfunction:execute as @e[name=dmain,scores={entad=2..2}] as @e[type=falling_block] run scoreboard players add @e[name=dmain] enta 1
 minecraft_alive_strpd\data\world\functions\mothernature\blockdecay\sec2\main - old.mcfunction:execute as @e[name=dmain,scores={entad=2..2}] as @e[type=item] run scoreboard players add @e[name=dmain] enta 1

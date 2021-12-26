@@ -56,8 +56,8 @@ execute as @e[name=load] at @s run forceload add ~17 ~17 ~-17 ~-17
 execute as @e[name=load] if entity @s[scores={workerposax=-5..5}] if entity @s[scores={workerposaz=-5..5}] run scoreboard players set @e[name=dmain] startworldclock 1
 
 # Main
-execute unless entity @e[name=dmain] run summon armor_stand 0 254 0 {CustomNameVisible:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"dmain"}'}
-execute unless entity @e[name=load] run summon armor_stand 0 254 0 {CustomNameVisible:1b,Silent:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"load"}'}
+execute unless entity @e[name=dmain] run summon marker 0 254 0 {CustomNameVisible:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"dmain"}'}
+execute unless entity @e[name=load] run summon marker 0 254 0 {CustomNameVisible:1b,Silent:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"load"}'}
 execute as @e[name=load] at @s run tp @s ~ 256 ~
 # execute at @e[name=load] run tp Ghostcrafter090 ~ ~ ~ facing ~ 0 ~
 execute at @e[name=load] run forceload add ~17 ~17 ~-17 ~-17

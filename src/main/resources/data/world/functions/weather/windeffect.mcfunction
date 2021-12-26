@@ -26,7 +26,7 @@ execute as @a run scoreboard players set @a windspeed 0
 execute as @a run scoreboard players operation @s wind -= @s wt_distance
 execute as @a run scoreboard players operation @s wind /= @s wn_derp
 execute as @a run scoreboard players operation @s wind += @s wn_derpa
-execute as @a store result score @s windspeed if entity @e[type=armor_stand]
+execute as @a store result score @s windspeed if entity @e[type=marker]
 execute as @a run scoreboard players operation @s windspeed /= @s wn_derpb
 
 # Wind Pulse
