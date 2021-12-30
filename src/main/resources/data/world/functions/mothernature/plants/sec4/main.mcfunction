@@ -48,8 +48,13 @@ execute as @e[name=treepltd] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~
 execute as @e[name=treepltj] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ jungle_sapling replace
 execute as @e[name=treeplto] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ oak_sapling replace
 execute as @e[name=treeplts] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ spruce_sapling replace
-execute at @e[name=derp] if block ~ ~-1 ~ #minecraft:leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
-execute as @e[name=tree] if entity @a[scores={td=46..50}] run data merge entity @s {CustomName:'{"text":"treepl"}',Tags:["mina"]}
+execute at @e[name=derp] if block ~ ~-1 ~ minecraft:acacia_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
+execute at @e[name=derp] if block ~ ~-1 ~ minecraft:oak_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
+execute at @e[name=derp] if block ~ ~-1 ~ minecraft:dark_oak_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
+execute at @e[name=derp] if block ~ ~-1 ~ minecraft:jungle_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
+execute at @e[name=derp] if block ~ ~-1 ~ minecraft:birch_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
+execute at @e[name=derp] if block ~ ~-1 ~ minecraft:spruce_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
+execute as @e[name=tree] if entity @e[name=dmain,type=marker,scores={td=46..50}] run data merge entity @s {CustomName:'{"text":"treepl"}',Tags:["mina"]}
 scoreboard players add @e[name=treepl] td 1
 execute as @e[name=treepl,scores={td=1..1}] at @s run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"treeplt"}',Tags:["mina"]}
 execute as @e[name=treepl] at @s run spreadplayers ~ ~ 0 15 false @e[name=treeplt]

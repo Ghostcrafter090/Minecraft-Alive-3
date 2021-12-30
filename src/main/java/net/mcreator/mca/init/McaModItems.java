@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.mca.item.WaterKeyShardItem;
 import net.mcreator.mca.item.WaterKeyItem;
+import net.mcreator.mca.item.TheBlightItem;
 import net.mcreator.mca.item.FireKeyShardItem;
 import net.mcreator.mca.item.FireKeyItem;
 import net.mcreator.mca.item.EndKeyItem;
@@ -36,6 +37,7 @@ public class McaModItems {
 	public static final Item FIRE_KEY = register(new FireKeyItem());
 	public static final Item DEFUNCT_END_KEY = register(new DefunctEndKeyItem());
 	public static final Item END_KEY = register(new EndKeyItem());
+	public static final Item THE_BLIGHT = register(new TheBlightItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

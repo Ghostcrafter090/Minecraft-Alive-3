@@ -41,6 +41,7 @@ function world:effects/stamina
 # function world:weather/storm
 execute if entity @e[type=marker,name=dmain,scores={regu=..3}] run function world:dimensions/the_ways/main
 function world:bosses/villageraid/main
+function world:bosses/guardian/main
 execute if entity @e[type=marker,name=dmain,scores={regun=2..}] run function world:effects/health
 execute if entity @e[type=marker,name=dmain,scores={vregu=6..6}] run scoreboard players operation @e[type=marker,name=dmain] vregu -= @e[type=marker,name=dmain] blockta
 scoreboard players add @e[type=marker,name=dmain] vregu 1
@@ -111,6 +112,9 @@ execute if entity @e[type=marker,name=dmain,scores={blocktc=1..}] run scoreboard
 execute if entity @e[type=marker,name=dmain,scores={moriatic=..1}] run scoreboard players set @e[type=marker,name=dmain] moriatic 5
 scoreboard players remove @e[type=marker,name=dmain] moriatic 1
 
+# Bodys
+function world:effects/bodys
+
 # Water Moria Tic
 execute if entity @e[type=marker,name=dmain,scores={wmoriatic=..2}] run function world:moria/monsters/fire/main
 execute if entity @e[type=marker,name=dmain,scores={wmoriatic=..2}] run scoreboard players operation @e[type=marker,name=dmain] wmoriatic *= @e[type=marker,name=dmain] blockta
@@ -153,3 +157,53 @@ execute if entity @e[type=marker,name=dmain,scores={loadclock=..40}] run scorebo
 
 # Declare Objectives
 execute unless entity @e[type=marker,name=dmain,scores={loadob=1..1}] run function world:loadob
+
+# The Blight
+scoreboard objectives add blightExit dummy
+execute in mca:the_blight as @a if entity @s[scores={air=..10},distance=0..1000] run scoreboard players add @s blightExit 1
+execute in mca:the_blight as @a unless entity @s[scores={air=..10},distance=0..1000] if entity @s[scores={blightExit=-5..}] run scoreboard players remove @s blightExit 1
+execute as @a[scores={blightExit=1..}] at @s run playsound minecraft:ambient.basalt_deltas.additions master @a ~ ~ ~ 1 2
+execute as @a[scores={blightExit=1..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=10..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=20..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=30..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=40..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=50..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=60..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=70..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=80..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=90..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=100..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=110..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=120..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=130..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=140..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=150..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightExit=160..}] at @s in minecraft:overworld run tp @s ~ ~ ~
+execute as @a[scores={blightExit=160..}] at @s run scoreboard players set @s blightExit 150
+
+function world:blight/main
+execute as @e[tag=sawayig] if entity @s[tag=stuck] at @s if entity @e[type=minecraft:potion,nbt={Item:{tag:{Potion:"minecraft:water_breathing"}}},distance=0..3] run tag @s add blight
+scoreboard objectives add blightEnter dummy
+execute in mca:the_blight as @e[tag=sawayig] if entity @s[tag=stuck] if entity @s[tag=blight] as @a run scoreboard players add @s blightEnter 2
+execute in mca:the_blight as @a unless entity @s[scores={air=..10},distance=0..1000] if entity @s[scores={blightEnter=-5..}] run scoreboard players remove @s blightEnter 1
+execute as @a[scores={blightEnter=1..}] at @s run playsound minecraft:ambient.basalt_deltas.additions master @a ~ ~ ~ 1 2
+execute as @a[scores={blightEnter=1..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=10..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=20..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=30..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=40..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=50..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=60..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=70..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=80..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=90..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=100..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=110..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=120..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=130..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=140..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=150..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @a[scores={blightEnter=160..}] at @s in mca:the_blight run tp @s ~ ~ ~
+execute as @a[scores={blightEnter=160..}] as @e[tag=sawayig] at @s run summon tnt ~ ~ ~
+execute as @a[scores={blightEnter=160..}] at @s run scoreboard players set @s blightEnter 150

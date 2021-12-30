@@ -13,6 +13,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.mca.block.TheBlightPortalBlock;
 import net.mcreator.mca.block.RedfinesandBlock;
 import net.mcreator.mca.block.LoosegravelBlock;
 import net.mcreator.mca.block.HumusBlock;
@@ -28,6 +29,7 @@ public class McaModBlocks {
 	public static final Block LOOSEGRAVEL = register(new LoosegravelBlock());
 	public static final Block FINESAND = register(new FinesandBlock());
 	public static final Block REDFINESAND = register(new RedfinesandBlock());
+	public static final Block THE_BLIGHT_PORTAL = register(new TheBlightPortalBlock());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);

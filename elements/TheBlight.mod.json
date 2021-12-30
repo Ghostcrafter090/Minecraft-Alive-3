@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:Blight"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "Blocks.STONE#5"
+    },
+    "fluidBlock": {
+      "value": "Blocks.WATER"
+    },
+    "airColor": {
+      "value": -3355393,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": true,
+    "isDark": true,
+    "doesWaterVaporize": false,
+    "sleepResult": "BED_EXPLODES",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "Blocks.DEAD_FIRE_CORAL_BLOCK"
+    },
+    "portalParticles": {
+      "value": "MYCELIUM"
+    },
+    "portalLuminance": 0,
+    "portalSound": {
+      "value": "ambient.underwater.loop.additions.rare"
+    },
+    "igniterName": "The Blight Portal Igniter",
+    "igniterTab": {
+      "value": "TOOLS"
+    },
+    "texture": "fire_key",
+    "portalTexture": "blight_portal",
+    "enablePortal": true
+  }
+}

@@ -150,6 +150,27 @@
       "metadata": {
         "ep": false
       }
+    },
+    {
+      "name": "Blight",
+      "type": "biome",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blight"
+    },
+    {
+      "name": "TheBlight",
+      "type": "dimension",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "the_blight",
+      "metadata": {
+        "ep": true
+      }
     }
   ],
   "variable_elements": [],
@@ -162,6 +183,8 @@
       "block.mca.humus": "Humus",
       "item.mca.end_key": "End Key",
       "item.mca.theways": "Theways Portal Igniter",
+      "item.mca.the_blight": "The Blight Portal Igniter",
+      "biome.mca.blight": "Blight",
       "block.mca.loosegravel": "Loose Gravel",
       "block.mca.finesand": "Fine Sand",
       "block.mca.redfinesand": "Red Fine Sand",

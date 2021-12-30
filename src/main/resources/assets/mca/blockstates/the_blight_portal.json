@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "mca:block/the_blight_portal_ew"
+    },
+    "axis=x": {
+      "model": "mca:block/the_blight_portal_ns"
+    }
+  }
+}

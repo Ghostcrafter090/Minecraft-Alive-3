@@ -4,6 +4,12 @@ execute at @e[name=derp,type=marker] if block ~ ~-1 ~ mca:finesand run function 
 execute at @e[name=derp,type=marker] if block ~ ~-1 ~ mca:redfinesand run function world:mothernature/blockdecay/base/basic
 execute at @e[name=derp,type=marker] if block ~ ~-1 ~ mca:humus run function world:mothernature/blockdecay/base/basic
 execute at @e[name=derp,type=marker] run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace coarse_dirt
+execute at @e[name=derp,type=marker] run fill ~ ~-1 ~ ~ ~-1 ~ mca:loosegravel replace stone
+execute at @e[name=derp,type=marker] run fill ~ ~-1 ~ ~ ~-1 ~ mca:finesand replace gravel
+execute at @e[name=derp,type=marker] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace mca:finesand
+execute at @e[name=derp,type=marker] run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace mca:humus
+
+
 
 # Reguation Commands
 scoreboard objectives add regulate dummy

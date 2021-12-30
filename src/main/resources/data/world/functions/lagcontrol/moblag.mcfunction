@@ -17,8 +17,8 @@ execute as @e[type=egg,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagc
 execute as @e[type=enderman,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=endermite,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=ender_pearl,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
-execute as @e[type=evoker,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
-execute as @e[type=evoker_fangs,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+# execute as @e[type=evoker,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+# execute as @e[type=evoker_fangs,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=experience_bottle,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=experience_orb,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=eye_of_ender,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
@@ -27,7 +27,7 @@ execute as @e[type=fireball,tag=!lagcontrol,limit=10,sort=random] run tag @s add
 execute as @e[type=fishing_bobber,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=hoglin,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=horse,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
-execute as @e[type=illusioner,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+# execute as @e[type=illusioner,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=item,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=llama_spit,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=magma_cube,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
@@ -50,9 +50,9 @@ execute as @e[type=small_fireball,tag=!lagcontrol,limit=10,sort=random] run tag 
 execute as @e[type=snowball,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=spectral_arrow,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=spider,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
-execute as @e[type=stray,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
-execute as @e[type=vex,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
-execute as @e[type=vindicator,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+# execute as @e[type=stray,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+# execute as @e[type=vex,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
+# execute as @e[type=vindicator,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=witch,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=wither_skull,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 execute as @e[type=zoglin,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
@@ -64,10 +64,10 @@ execute as @e[type=minecraft:zombified_piglin,tag=!lagcontrol,limit=10,sort=rand
 
 scoreboard objectives add kill_ent dummy
 scoreboard objectives add kill_max dummy
-execute unless entity @e[name=dmain,scores={kill_max=0..}] run scoreboard players set @e[name=dmain] kill_max 200
+execute unless entity @e[name=dmain,scores={kill_max=0..}] run scoreboard players set @e[name=dmain] kill_max 500
 execute store result score @e[name=dmain] kill_ent if entity @e[tag=lagcontrol]
 scoreboard players operation @e[name=dmain] kill_ent -= @e[name=dmain] kill_max
-execute if entity @e[name=dmain,scores={kill_ent=1..}] run kill @e[tag=lagcontrol,limit=20,sort=random]
+execute if entity @e[name=dmain,scores={kill_ent=1..}] as @e[tag=lagcontrol,limit=20,sort=random] run function world:lagcontrol/kill
 execute if entity @e[name=dmain,scores={kill_ent=1..}] run say [Minecraft Alive] - Max killable entities detected. Clearing...
 
 scoreboard objectives add moria_ent dummy
@@ -80,7 +80,7 @@ execute if entity @e[name=dmain,scores={moria_ent=1..}] run say [Minecraft Alive
 
 scoreboard objectives add all_ent dummy 
 scoreboard objectives add all_max dummy 
-execute unless entity @e[name=dmain,scores={all_max=0..}] run scoreboard players set @e[name=dmain] all_max 400
+execute unless entity @e[name=dmain,scores={all_max=0..}] run scoreboard players set @e[name=dmain] all_max 600
 execute store result score @e[name=dmain] all_ent if entity @e
 scoreboard players operation @e[name=dmain] all_ent -= @e[name=dmain] all_max 
 execute if entity @e[name=dmain,scores={all_ent=1..}] run forceload remove all

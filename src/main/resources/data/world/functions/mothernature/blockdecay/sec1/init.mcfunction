@@ -9,4 +9,4 @@ execute as @e[name=derp,type=marker,scores={td=11..11}] at @s if block ~ ~-1 ~ g
 execute as @e[name=derp,type=marker,scores={td=12..12}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ allium replace
 scoreboard players add @e[name=derp,type=marker] td 1
 execute if entity @e[name=derp,type=marker,scores={td=15..}] run scoreboard players set @e[name=derp,type=marker] td 0
-execute as @a at @s run spreadplayers ~ ~ 0 80 false @e[name=derp,type=marker,distance=0..120]
+execute as @a at @s run spreadplayers ~ ~ 0 350 false @e[name=derp,type=marker,distance=0..120]
