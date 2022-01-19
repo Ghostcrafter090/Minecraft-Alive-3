@@ -7,6 +7,10 @@ scoreboard objectives add randomposx dummy
 scoreboard objectives add randomposy dummy
 scoreboard objectives add randomposz dummy
 scoreboard objectives add random dummy
+scoreboard objectives add random10 dummy
+scoreboard objectives add random50 dummy
+scoreboard objectives add random100 dummy
+scoreboard objectives add randMultVal dummy
 
 
 # Main
@@ -24,7 +28,12 @@ scoreboard players operation @a random *= @a randomuuidd
 scoreboard players operation @a random *= @a randomposx
 scoreboard players operation @a random *= @a randomposy
 scoreboard players operation @a random *= @a randomposz
-
-
-
-
+execute as @a run scoreboard players operation @s random10 = @r random
+execute as @a run scoreboard players operation @s random50 = @r random
+execute as @a run scoreboard players operation @s random100 = @r random
+scoreboard players set @e[name=dmain,type=marker] randMultVal 10
+execute as @a run scoreboard players operation @s random10 %= @e[name=dmain,type=marker] randMultVal
+scoreboard players set @e[name=dmain,type=marker] randMultVal 50
+execute as @a run scoreboard players operation @s random50 %= @e[name=dmain,type=marker] randMultVal
+scoreboard players set @e[name=dmain,type=marker] randMultVal 100
+execute as @a run scoreboard players operation @s random100 %= @e[name=dmain,type=marker] randMultVal

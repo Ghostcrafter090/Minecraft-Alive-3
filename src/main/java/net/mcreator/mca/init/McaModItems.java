@@ -20,6 +20,7 @@ import net.mcreator.mca.item.FireKeyShardItem;
 import net.mcreator.mca.item.FireKeyItem;
 import net.mcreator.mca.item.EndKeyItem;
 import net.mcreator.mca.item.DefunctEndKeyItem;
+import net.mcreator.mca.item.AnchientPageItem;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -38,6 +39,7 @@ public class McaModItems {
 	public static final Item DEFUNCT_END_KEY = register(new DefunctEndKeyItem());
 	public static final Item END_KEY = register(new EndKeyItem());
 	public static final Item THE_BLIGHT = register(new TheBlightItem());
+	public static final Item ANCHIENT_PAGE = register(new AnchientPageItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

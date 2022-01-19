@@ -171,6 +171,24 @@
       "metadata": {
         "ep": true
       }
+    },
+    {
+      "name": "AnchientPage",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anchient_page"
+    },
+    {
+      "name": "MugukBo",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "muguk_bo"
     }
   ],
   "variable_elements": [],
@@ -185,6 +203,7 @@
       "item.mca.theways": "Theways Portal Igniter",
       "item.mca.the_blight": "The Blight Portal Igniter",
       "biome.mca.blight": "Blight",
+      "item.mca.anchient_page": "Anchient Page",
       "block.mca.loosegravel": "Loose Gravel",
       "block.mca.finesand": "Fine Sand",
       "block.mca.redfinesand": "Red Fine Sand",

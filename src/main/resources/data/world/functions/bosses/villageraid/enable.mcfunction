@@ -13,4 +13,4 @@ execute as @a at @s positioned ~-30 ~ ~ run playsound minecraft:event.raid.horn 
 execute as @a at @s positioned ~ ~ ~30 run playsound minecraft:event.raid.horn master @a ~ ~ ~ 9 0.1
 execute as @a at @s positioned ~ ~ ~-30 run playsound minecraft:event.raid.horn master @a ~ ~ ~ 9 0.1
 scoreboard players set @e[name=dmain,type=marker] stopEnable 1
-
+scoreboard players set @s progScore 2

@@ -6,6 +6,8 @@ execute as @e[type=item,tag=water_key_shard,scores={guardStartTic=100..}] as @e[
 execute unless entity @e[tag=!effectguard] run scoreboard players set @e[name=dmain,type=marker] guardBool 1
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run stopsound @a
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run summon marker ~ ~ ~ {Tags:["water_key_spawn","effectguard"]}
+execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run summon marker ~ ~ ~ {Tags:["water_key_spawn_site","effectguard"]}
+execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run summon wither ~ 500 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Tags:["magMark","effectguard"],CustomName:'{"text":"Water Key Spawn Site"}'}
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run particle minecraft:flash ~ ~ ~ 0 0 0 1 1000
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run particle minecraft:electric_spark ~ ~ ~ 0 0 0 10 1000
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run particle minecraft:glow ~ ~ ~ 0 0 0 1 1000

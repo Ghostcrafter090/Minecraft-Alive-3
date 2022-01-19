@@ -15,8 +15,6 @@ scoreboard objectives add elderGuardKill minecraft.killed:minecraft.elder_guardi
 scoreboard objectives add playerElderKills dummy
 
 # Main
-execute as @a at @s as @e[tag=!found,type=item,distance=0..10] if entity @s[nbt={Item:{id:"mca:water_key_shard",Count:1b}}] run tag @s add water_key_shard
-execute as @a at @s as @e[tag=!found,type=item,distance=0..10] if entity @s[nbt=!{Item:{id:"mca:water_key_shard",Count:1b}}] run tag @s add found
 execute as @e[type=item,tag=water_key_shard] at @s if block ~ ~ ~ minecraft:water_cauldron[level=3] if block ~ ~-1 ~ minecraft:soul_campfire[lit=true] run particle minecraft:bubble ~ ~ ~ 1 1 1 0 10 force
 execute as @e[type=item,tag=water_key_shard] at @s if block ~ ~ ~ minecraft:water_cauldron[level=3] if block ~ ~-1 ~ minecraft:soul_campfire[lit=true] if entity @e[type=item,limit=1,distance=0..1,nbt={Item:{id:"minecraft:nautilus_shell",Count:1b}}] run particle minecraft:falling_dripstone_water ~ ~ ~ 1 10 1 0.1 10 force
 execute as @e[type=item,tag=water_key_shard] at @s if block ~ ~ ~ minecraft:water_cauldron[level=3] if block ~ ~-1 ~ minecraft:soul_campfire[lit=true] if entity @e[type=item,limit=1,distance=0..1,nbt={Item:{id:"minecraft:totem_of_undying",Count:1b}}] run particle minecraft:enchant ~ ~ ~ 1 10 1 0.1 10 force
@@ -24,12 +22,13 @@ execute as @e[type=item,tag=water_key_shard] at @s if block ~ ~ ~ minecraft:wate
 execute as @e[type=item,tag=water_key_shard] at @s if block ~ ~ ~ minecraft:water_cauldron[level=3] if block ~ ~-1 ~ minecraft:soul_campfire[lit=true] if entity @e[type=item,limit=1,distance=0..1,nbt={Item:{id:"minecraft:totem_of_undying",Count:1b}}] if entity @e[type=item,limit=1,distance=0..1,nbt={Item:{id:"minecraft:heart_of_the_sea",Count:1b}}] if entity @e[type=item,limit=1,distance=0..1,nbt={Item:{id:"minecraft:nautilus_shell",Count:1b}}] run scoreboard players add @s guardStartTic 1
 execute as @e[type=item,tag=water_key_shard,scores={guardStartTic=1..}] at @s run function world:bosses/guardian/start
 execute as @e[type=item,tag=water_key_shard,scores={guardStartTic=1..}] run function world:bosses/guardian/effects
-execute if entity @e[name=dmain,scores={guardBool=1..1}] run function world:bosses/guardian/effects
+execute if entity @e[name=dmain,type=marker,scores={guardBool=1..1}] run function world:bosses/guardian/effects
 execute as @e[type=item,tag=water_key_shard] at @s run playsound minecraft:ambient.underwater.loop.additions.ultra_rare master @a ~ ~ ~ 0.1 1.5
 execute as @e[type=item,tag=water_key_shard] at @s run particle minecraft:warped_spore ~ ~ ~ 0 0 0 1 10
+tag @e[type=item,tag=water_key_shard,distance=0..5] add dimensional
 execute if entity @e[name=dmain,type=marker,scores={guardBool=1..1}]
 scoreboard players add @e[tag=water_key_spawn,type=marker] timeAlive 1
-execute as @e[tag=water_key_spawn,type=marker,scores={timeAlive=10..}] at @s run summon item ~ ~ ~ {Item:{id:"mca:water_key",Count:1b}}
+execute as @e[tag=water_key_spawn,type=marker,scores={timeAlive=10..}] at @s run summon item ~ ~ ~ {Item:{id:"mca:water_key",Count:1b},Tags:['dimensional']}
 execute as @e[tag=water_key_spawn,type=marker,scores={timeAlive=10..}] at @s run kill @s
 
 # Spawn Site Effects

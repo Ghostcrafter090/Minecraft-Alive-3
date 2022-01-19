@@ -71,7 +71,7 @@ execute if entity @e[scores={time=20..21},name=dmain,type=marker] as @a run scor
 execute if entity @e[scores={time=20..21},name=dmain,type=marker] as @a run scoreboard players operation @s DT = @s DTD
 
 # Extras
-execute at @e[type=villager] as @a[distance=0..6] at @s run say Hello!
+# execute as @e[type=villager] at @s if entity @a[distance=0..6] at @s run say Hello !
 
 # Populations
 execute as @e[type=villager,tag=!vil] unless entity @s[scores={vwl=2..2}] at @s if blocks -4 253 4 3 253 -4 ~-4 ~-1 ~-4 masked run scoreboard players set @s vwl 1
