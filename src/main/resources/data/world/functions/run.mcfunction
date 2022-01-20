@@ -78,8 +78,8 @@ scoreboard players add @e[type=marker,name=dmain] atic 1
 scoreboard players set @e[type=marker,name=dmain] blockt2 10000000
 
 # World Load
-execute if entity @e[type=marker,name=dmain,scores={moriatic=..2}] positioned -299 31 -256 run forceload add ~17 ~17 ~-17 ~-17
-execute unless entity @e[type=marker,name=dmain,scores={moriatic=..2}] positioned -299 31 -256 run forceload remove ~17 ~17 ~-17 ~-17
+#  execute if entity @e[type=marker,name=dmain,scores={moriatic=..2}] positioned -299 31 -256 run forceload add ~17 ~17 ~-17 ~-17
+#  execute unless entity @e[type=marker,name=dmain,scores={moriatic=..2}] positioned -299 31 -256 run forceload remove ~17 ~17 ~-17 ~-17
 # execute positioned -504 11 45 run forceload add ~17 ~17 ~-17 ~-17
 
 # Moria Load
@@ -87,10 +87,10 @@ scoreboard players add @e[type=marker,name=dmain] lreg 1
 # execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] run data remove storage minecraft:entity.location load
 # execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] as @e[scores={airfill=1..1}] run data modify storage minecraft:entity.location load append from entity @s Pos
 # execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] as @e[scores={waterfill=1..1}] run data modify storage minecraft:entity.location load append from entity @s Pos
-execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] as @e[scores={airfill=1..1}] run function world:grabentity
+# execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] as @e[scores={airfill=1..1}] run function world:grabentity
 # execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] as @e[scores={waterfill=1..1}] run function world:grabentity
 
-execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] run function world:worldload
+# execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] run function world:worldload
 execute if entity @e[type=marker,name=dmain,scores={lreg=16..}] run scoreboard players set @e[type=marker,name=dmain] lreg 0
 execute if entity @e[type=marker,name=dmain,scores={lreg=0..0}] run scoreboard players operation @e[type=marker,name=dmain] lreg -= @e[type=marker,name=dmain] blockta
 execute if entity @e[type=marker,name=dmain,scores={lreg=-1..-1}] run scoreboard players set @e[type=marker,name=dmain] lreg 1
@@ -120,7 +120,7 @@ scoreboard players remove @e[type=marker,name=dmain] moriatic 1
 function world:effects/bodys
 
 # Water Moria Tic
-execute if entity @e[type=marker,name=dmain,scores={wmoriatic=..2}] run function world:moria/monsters/fire/main
+# execute if entity @e[type=marker,name=dmain,scores={wmoriatic=..2}] run function world:moria/monsters/fire/main
 execute if entity @e[type=marker,name=dmain,scores={wmoriatic=..2}] run scoreboard players operation @e[type=marker,name=dmain] wmoriatic *= @e[type=marker,name=dmain] blockta
 execute if entity @e[type=marker,name=dmain,scores={wmoriatic=..2}] run scoreboard players set @e[type=marker,name=dmain] wmoriatic 20
 scoreboard players remove @e[type=marker,name=dmain] wmoriatic 1

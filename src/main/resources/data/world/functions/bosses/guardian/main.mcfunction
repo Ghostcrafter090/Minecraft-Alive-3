@@ -52,8 +52,6 @@ execute as @a run scoreboard players operation @e[name=dmain,type=marker] player
 
 # Boss Finish
 execute as @e[name=dmain,type=marker] if score @s guardianCount = @s playerElderKills if entity @s[scores={playerElderKills=3..}] run give @r mca:fire_key_shard 1
-execute as @e[name=dmain,type=marker] if score @s guardianCount = @s playerElderKills if entity @s[scores={playerElderKills=3..}] run give @r mca:fire_key_shard 1
-execute as @e[name=dmain,type=marker] if score @s guardianCount = @s playerElderKills if entity @s[scores={playerElderKills=3..}] run give @r mca:fire_key_shard 1
 execute as @e[name=dmain,type=marker] if score @s guardianCount = @s playerElderKills if entity @s[scores={playerElderKills=3..}] run function world:bosses/guardian/reset
 
 # Guardians
