@@ -184,7 +184,7 @@ execute as @a[scores={blightExit=130..}] at @s run particle minecraft:soul_fire_
 execute as @a[scores={blightExit=140..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
 execute as @a[scores={blightExit=150..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
 execute as @a[scores={blightExit=160..}] at @s in minecraft:overworld run tp @s ~ ~ ~
-execute as @a[scores={blightExit=160..}] run scoreboard players set @s progScore 7
+execute as @a[scores={blightExit=160..}] unless entity @s[scores={progScore=7..}] run scoreboard players set @s progScore 7
 execute as @a[scores={blightExit=160..}] at @s run scoreboard players set @s blightExit 150
 
 function world:blight/main
@@ -210,6 +210,6 @@ execute as @a[scores={blightEnter=130..}] at @s run particle minecraft:soul_fire
 execute as @a[scores={blightEnter=140..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
 execute as @a[scores={blightEnter=150..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
 execute as @a[scores={blightEnter=160..}] at @s in mca:the_blight run tp @s ~ ~ ~
-execute as @a[scores={blightEnter=160..}] run scoreboard players set @s progScore 6
+execute as @a[scores={blightEnter=160..}] unless entity @s[scores={progScore=6..}] run scoreboard players set @s progScore 6
 execute as @a[scores={blightEnter=160..}] as @e[tag=sawayig] at @s run summon tnt ~ ~ ~
 execute as @a[scores={blightEnter=160..}] at @s run scoreboard players set @s blightEnter 150
