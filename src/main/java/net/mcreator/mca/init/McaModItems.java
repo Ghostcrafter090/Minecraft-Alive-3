@@ -16,6 +16,8 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.mca.item.WaterKeyShardItem;
 import net.mcreator.mca.item.WaterKeyItem;
 import net.mcreator.mca.item.TheBlightItem;
+import net.mcreator.mca.item.KyakunutCrystalItem;
+import net.mcreator.mca.item.KyaConduitItem;
 import net.mcreator.mca.item.FireKeyShardItem;
 import net.mcreator.mca.item.FireKeyItem;
 import net.mcreator.mca.item.EndKeyItem;
@@ -40,6 +42,8 @@ public class McaModItems {
 	public static final Item END_KEY = register(new EndKeyItem());
 	public static final Item THE_BLIGHT = register(new TheBlightItem());
 	public static final Item ANCHIENT_PAGE = register(new AnchientPageItem());
+	public static final Item KYAKUNUT_CRYSTAL = register(new KyakunutCrystalItem());
+	public static final Item KYA_CONDUIT = register(new KyaConduitItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

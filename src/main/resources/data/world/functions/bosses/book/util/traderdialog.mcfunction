@@ -22,4 +22,3 @@ execute as @s if entity @s[scores={curCloseTic=700..700}] run say Mag... I mean,
 execute as @s if entity @s[scores={curCloseTic=800..800}] run say People! PEOPLE! It's alright! I am just your local trader! Nothing more!
 execute as @s if entity @s[scores={curCloseTic=1000..1000}] run say *few*... appolagies, I nearely got caught there, anyways! Do you wish to buy from me? or not!?
 execute as @s if entity @s[scores={curCloseTic=1200..1200}] run tag @s add foundplayer
-

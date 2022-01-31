@@ -1,172 +1,153 @@
 {
   "map.ambience.deepcave": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/deepcave",
-        "stream": true 
+        "name": "custom/ambience/deepcave"
       } 
     ]
   },
   "map.ambience.desert": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/desert",
-        "stream": true 
+        "name": "custom/ambience/desert"
       } 
     ]
   },
   "map.plane.crasheffect": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/plane/crasheffect",
-        "stream": true 
+        "name": "custom/plane/crasheffect"
       } 
     ]
   },
   "map.ambience.end": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/end",
-        "stream": true 
+        "name": "custom/ambience/end"
       } 
     ]
   },
   "map.ambience.forestbirch": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/forestbirch",
-        "stream": true 
+        "name": "custom/ambience/forestbirch"
       } 
     ]
   },
   "map.ambience.forestmain": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/forestmain",
-        "stream": true 
+        "name": "custom/ambience/forestmain"
       } 
     ]
   },
   "map.ambience.forestsnow": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/forestsnow",
-        "stream": true 
+        "name": "custom/ambience/forestsnow"
       } 
     ]
   },
   "map.ambience.foresttaiga": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/foresttaiga",
-        "stream": true 
+        "name": "custom/ambience/foresttaiga"
       } 
     ]
   },
   "map.ambience.highlevelmountain": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/highlevelmountain",
-        "stream": true 
+        "name": "custom/ambience/highlevelmountain"
       } 
     ]
   },
   "map.ambience.highlevelwoods": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/highlevelwoods",
-        "stream": true 
+        "name": "custom/ambience/highlevelwoods"
       } 
     ]
   },
   "map.ambience.jungle": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/jungle",
-        "stream": true 
+        "name": "custom/ambience/jungle"
       } 
     ]
   },
   "map.ambience.middleocean": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/middleocean",
-        "stream": true 
+        "name": "custom/ambience/middleocean"
       } 
     ]
   },
   "map.ambience.mountain": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/mountain",
-        "stream": true 
+        "name": "custom/ambience/mountain"
       } 
     ]
   },
   "map.ambience.oceanwaves": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/oceanwaves",
-        "stream": true 
+        "name": "custom/ambience/oceanwaves"
       } 
     ]
   },
   "map.ambience.plains": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/plains",
-        "stream": true 
+        "name": "custom/ambience/plains"
       } 
     ]
   },
   "map.ambience.river": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/river",
-        "stream": true 
+        "name": "custom/ambience/river"
       } 
     ]
   },
   "map.ambience.savanah": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/savanah",
-        "stream": true 
+        "name": "custom/ambience/savanah"
       } 
     ]
   },
   "map.ambience.swamp": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/swamp",
-        "stream": true 
+        "name": "custom/ambience/swamp"
       } 
     ]
   },
   "map.ambience.tundra": {
-    "category": "music",
+    "category": "block",
     "sounds": [
       {
-        "name": "custom/ambience/tundra",
-        "stream": true 
+        "name": "custom/ambience/tundra"
       } 
     ]
   }

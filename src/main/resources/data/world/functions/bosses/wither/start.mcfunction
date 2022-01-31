@@ -19,6 +19,7 @@ execute unless entity @e[tag=!effectwither] as @e[type=item,tag=fire_key_shard] 
 execute unless entity @e[tag=!effectwither] as @e[type=item,tag=fire_key_shard] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 9 2
 execute unless entity @e[tag=!effectwither] as @e[type=item,tag=fire_key_shard] at @s run playsound minecraft:ambient.cave master @a ~ ~ ~ 9 0.1
 execute unless entity @e[tag=!effectwither] as @e[type=item,tag=fire_key_shard] at @s run playsound minecraft:entity.enderman.stare master @a ~ ~ ~ 9 0.1
+execute unless entity @e[tag=!effectwither] as @e[type=item,tag=fire_key_shard] at @s run scoreboard players set @p fireKeySpawned 1
 execute unless entity @e[tag=!effectwither] as @e[type=item,tag=fire_key_shard] at @s run summon fireball ~ ~ ~ {ExplosionPower:30b,power:[0.0,-1.0,0.0]}
 execute unless entity @e[tag=!effectwither] run kill @e[type=item]
 execute if entity @e[type=item,tag=fire_key_shard,scores={witherStartTic=1000..}] run scoreboard players set @e[name=dmain,type=marker] witherBool 1
@@ -36,5 +37,6 @@ execute if entity @e[type=item,tag=fire_key_shard,scores={witherStartTic=1000..}
 execute if entity @e[type=item,tag=fire_key_shard,scores={witherStartTic=1000..}] as @e[type=item,tag=fire_key_shard] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 9 2
 execute if entity @e[type=item,tag=fire_key_shard,scores={witherStartTic=1000..}] as @e[type=item,tag=fire_key_shard] at @s run playsound minecraft:ambient.cave master @a ~ ~ ~ 9 0.1
 execute if entity @e[type=item,tag=fire_key_shard,scores={witherStartTic=1000..}] as @e[type=item,tag=fire_key_shard] at @s run playsound minecraft:entity.enderman.stare master @a ~ ~ ~ 9 0.1
+execute if entity @e[type=item,tag=fire_key_shard,scores={witherStartTic=1000..}] as @e[type=item,tag=fire_key_shard] at @s run scoreboard players set @p fireKeySpawned 1
 execute if entity @e[type=item,tag=fire_key_shard,scores={witherStartTic=1000..}] as @e[type=item,tag=fire_key_shard] at @s run summon fireball ~ ~ ~ {ExplosionPower:30b,power:[0.0,-1.0,0.0]}
 execute if entity @e[type=item,tag=fire_key_shard,scores={witherStartTic=1000..}] run kill @e[type=item]

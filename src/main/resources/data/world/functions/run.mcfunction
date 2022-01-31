@@ -43,8 +43,9 @@ execute if entity @e[type=marker,name=dmain,scores={regu=..3}] run function worl
 function world:bosses/villageraid/main
 function world:bosses/guardian/main
 function world:bosses/keys
-function world:bosses/book/bookmagic
+function world:bosses/book/main
 function world:bosses/wither/main
+function world:bosses/ender/main
 function world:village/names
 execute if entity @e[type=marker,name=dmain,scores={regun=2..}] run function world:effects/health
 execute if entity @e[type=marker,name=dmain,scores={vregu=6..6}] run scoreboard players operation @e[type=marker,name=dmain] vregu -= @e[type=marker,name=dmain] blockta
@@ -184,7 +185,7 @@ execute as @a[scores={blightExit=130..}] at @s run particle minecraft:soul_fire_
 execute as @a[scores={blightExit=140..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
 execute as @a[scores={blightExit=150..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
 execute as @a[scores={blightExit=160..}] at @s in minecraft:overworld run tp @s ~ ~ ~
-execute as @a[scores={blightExit=160..}] unless entity @s[scores={progScore=7..}] run scoreboard players set @s progScore 7
+execute as @a[scores={blightExit=160..}] run scoreboard players set @s exitedBlight 1
 execute as @a[scores={blightExit=160..}] at @s run scoreboard players set @s blightExit 150
 
 function world:blight/main
@@ -210,6 +211,6 @@ execute as @a[scores={blightEnter=130..}] at @s run particle minecraft:soul_fire
 execute as @a[scores={blightEnter=140..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
 execute as @a[scores={blightEnter=150..}] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
 execute as @a[scores={blightEnter=160..}] at @s in mca:the_blight run tp @s ~ ~ ~
-execute as @a[scores={blightEnter=160..}] unless entity @s[scores={progScore=6..}] run scoreboard players set @s progScore 6
+execute as @a[scores={blightEnter=160..}] run scoreboard players set @s enteredBlight 1
 execute as @a[scores={blightEnter=160..}] as @e[tag=sawayig] at @s run summon tnt ~ ~ ~
 execute as @a[scores={blightEnter=160..}] at @s run scoreboard players set @s blightEnter 150

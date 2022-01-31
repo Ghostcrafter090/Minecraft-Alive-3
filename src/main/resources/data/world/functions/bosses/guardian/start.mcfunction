@@ -18,6 +18,7 @@ execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] 
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 9 2
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run playsound minecraft:ambient.cave master @a ~ ~ ~ 9 0.1
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run playsound minecraft:entity.enderman.stare master @a ~ ~ ~ 9 0.1
+execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run scoreboard players set @p waterKeySpawned 1
 execute unless entity @e[tag=!effectguard] as @e[type=item,tag=water_key_shard] at @s run summon creeper ~ ~ ~ {ExplosionRadius:30b,Fuse:1,ignited:1b}
 execute unless entity @e[tag=!effectguard] run kill @e[type=item]
 execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}] run scoreboard players set @e[name=dmain,type=marker] guardBool 1
@@ -34,6 +35,7 @@ execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}
 execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}] as @e[type=item,tag=water_key_shard] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 9 0.1
 execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}] as @e[type=item,tag=water_key_shard] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 9 2
 execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}] as @e[type=item,tag=water_key_shard] at @s run playsound minecraft:ambient.cave master @a ~ ~ ~ 9 0.1
+execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}] as @e[type=item,tag=water_key_shard] at @s run scoreboard players set @p waterKeySpawned 1
 execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}] as @e[type=item,tag=water_key_shard] at @s run playsound minecraft:entity.enderman.stare master @a ~ ~ ~ 9 0.1
 execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}] as @e[type=item,tag=water_key_shard] at @s run summon creeper ~ ~ ~ {ExplosionRadius:30b,Fuse:1,ignited:1b}
 execute if entity @e[type=item,tag=water_key_shard,scores={guardStartTic=1000..}] run kill @e[type=item]

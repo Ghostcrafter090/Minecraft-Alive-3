@@ -38,19 +38,45 @@ execute as @e[type=wither_skeleton,tag=Myddraal,scores={MMEffectTick=3..}] at @s
 
 # Close Effects
 scoreboard objectives add MMEffectTick dummy
+function world:extras/myddraal/tolerence
 execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10] run scoreboard players add @s MMEffectTick 1
+
+execute as @a at @s facing entity @e[tag=follow] feet run tp @e[tag=rot0] ~ ~ ~ ~ ~
+execute store result score @a rot0 run data get entity @e[tag=rot0,sort=nearest,limit=1] Rotation[0]
+execute store result score @a rot1 run data get entity @e[tag=rot1,sort=nearest,limit=1] Rotation[1]
+execute as @a at @s store result score @s rot2 run data get entity @s Rotation[0]
+execute as @a at @s store result score @s rot3 run data get entity @s Rotation[1]
+execute as @a at @s store result score @s rot3 run data get entity @s Rotation[1]
+execute as @a at @s if score @s rot0 < @s rot2 run tp @s ~ ~ ~ ~-1 ~
+execute as @a at @s if score @s rot1 < @s rot3 run tp @s ~ ~ ~ ~ ~-1
+execute as @a at @s if score @s rot0 > @s rot2 run tp @s ~ ~ ~ ~1 ~
+execute as @a at @s if score @s rot1 > @s rot3 run tp @s ~ ~ ~ ~ ~1
+
 execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..6,tag=!Myddraal] at @s facing entity @e[type=wither_skeleton,tag=Myddraal,limit=1,distance=0..10,sort=random] feet run tp @s ~ ~ ~ ~ ~
-execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..20] run effect give @s slowness 3 0 true
-execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..15,tag=!Myddraal] run effect give @s slowness 3 1 true
-execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10,tag=!Myddraal] run effect give @s slowness 3 2 true
-execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..5,tag=!Myddraal] run effect give @s slowness 3 3 true
-execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..5] run effect give @s weakness 3 0 true
-execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10,scores={MMEffectTick=0..3}] run effect give @s blindness 3 2
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..20] unless entity @s[scores={myddraalToc=24000..}] run effect give @s slowness 3 0 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..15] unless entity @s[scores={myddraalToc=48000..}] run effect give @s slowness 3 0 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10] unless entity @s[scores={myddraalToc=72000..}] run effect give @s slowness 3 0 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..5] unless entity @s[scores={myddraalToc=96000..}] run effect give @s slowness 3 0 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..2] unless entity @s[scores={myddraalToc=120000..}] run effect give @s slowness 3 0 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..15,tag=!Myddraal] unless entity @s[scores={myddraalToc=24000..}] run effect give @s slowness 3 1 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10,tag=!Myddraal] unless entity @s[scores={myddraalToc=48000..}] run effect give @s slowness 3 1 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..5,tag=!Myddraal] unless entity @s[scores={myddraalToc=72000..}] run effect give @s slowness 3 1 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..2,tag=!Myddraal] unless entity @s[scores={myddraalToc=96000..}] run effect give @s slowness 3 1 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10,tag=!Myddraal] unless entity @s[scores={myddraalToc=24000..}] run effect give @s slowness 3 2 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..5,tag=!Myddraal] unless entity @s[scores={myddraalToc=48000..}] run effect give @s slowness 3 2 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..2,tag=!Myddraal] unless entity @s[scores={myddraalToc=72000..}] run effect give @s slowness 3 2 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..5,tag=!Myddraal] unless entity @s[scores={myddraalToc=24000..}] run effect give @s slowness 3 3 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..2,tag=!Myddraal] unless entity @s[scores={myddraalToc=48000..}] run effect give @s slowness 3 3 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..5] unless entity @s[scores={myddraalToc=24000..}] run effect give @s weakness 3 0 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..2] unless entity @s[scores={myddraalToc=48000..}] run effect give @s weakness 3 0 true
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10,scores={MMEffectTick=0..3}] unless entity @s[scores={myddraalToc=24000..}] run effect give @s blindness 3 2
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..5,scores={MMEffectTick=0..3}] unless entity @s[scores={myddraalToc=48000..}] run effect give @s blindness 3 2
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..2,scores={MMEffectTick=0..3}] unless entity @s[scores={myddraalToc=72000..}] run effect give @s blindness 3 2
 execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10,scores={MMEffectTick=3..4}] run effect clear @s blindness
 execute as @e[type=wither_skeleton,tag=Myddraal] at @s as @e[type=!item_frame,distance=0..10,scores={MMEffectTick=4..}] run scoreboard players set @s MMEffectTick 0
 
 # General Effects
-execute as @e[type=wither_skeleton,tag=Myddraal] at @s run particle minecraft:crimson_spore ~ ~ ~ 1 1 1 1 100 force
+execute as @e[type=wither_skeleton,tag=Myddraal] at @s run particle minecraft:crimson_spore ~ ~ ~ 1 1 1 1 50 force
 
 # Death Effects
 execute as @e[type=armor_stand,name=deathdetect] at @s unless entity @e[type=wither_skeleton,tag=Myddraal,distance=0..2] run function world:extras/myddraal/death

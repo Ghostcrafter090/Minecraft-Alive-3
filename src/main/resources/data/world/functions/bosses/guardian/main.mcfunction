@@ -33,7 +33,7 @@ execute as @e[tag=water_key_spawn,type=marker,scores={timeAlive=10..}] at @s run
 
 # Spawn Site Effects
 execute as @e[tag=water_key_spawn_site] at @s run playsound minecraft:ambient.underwater.loop.additions.ultra_rare master @a ~ ~ ~ 0.1 1.5
-execute as @e[tag=water_key_spawn_site] at @s run particle minecraft:warped_spore ~ ~ ~ 10 10 10 1 200
+execute as @e[tag=water_key_spawn_site] at @s run particle minecraft:warped_spore ~ ~ ~ 10 10 10 1 100
 
 # Uninvuln
 execute as @e[type=elder_guardian,tag=!vuln,tag=!elder] run data modify entity @s Invulnerable set value 1b

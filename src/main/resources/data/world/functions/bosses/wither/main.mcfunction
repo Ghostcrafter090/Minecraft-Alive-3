@@ -38,16 +38,16 @@ execute as @e[tag=fire_key_spawn,type=marker,scores={timeAlive=10..}] at @s run 
 
 # Spawn Site Effects
 execute as @e[tag=fire_key_spawn_site] at @s run playsound minecraft:ambient.crimson_forest.additions master @a ~ ~ ~ 0.1 1.5
-execute as @e[tag=fire_key_spawn_site] at @s run particle minecraft:crimson_spore ~ ~ ~ 10 10 10 1 200
+execute as @e[tag=fire_key_spawn_site] at @s run particle minecraft:crimson_spore ~ ~ ~ 10 10 10 1 100
 
 # Portal Destory Effects
 execute as @e[tag=portal,type=marker,tag=finished] at @s unless block ~ ~2 ~ nether_portal run scoreboard players add @s portalDeath 3
-execute as @e[tag=portal,type=marker,tag=finished,scores={portalDeath=1..}] run scoreboard players remove @s 1
+execute as @e[tag=portal,type=marker,tag=finished,scores={portalDeath=1..}] run scoreboard players remove @s portalDeath 1
 execute if entity @e[tag=portal,type=marker,tag=finished,scores={portalDeath=1..}] run tag @e[limit=1,sort=random,tag=!portalDeath] add portalDeath
 execute as @e[tag=portal,type=marker,tag=finished,scores={portalDeath=1..}] at @s run particle minecraft:dragon_breath ~ ~3 ~ 1 1 1 1 1 force
 execute as @e[tag=portal,type=marker,tag=finished,scores={portalDeath=600..}] at @s positioned ~ ~3 ~ run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 blackstone replace obsidian
-execute as @e[tag=portal,type=marker,tag=finished,scores={portalDeath=600..}] at @s positioned ~ ~3 ~ run summon fireball ~ ~ ~ {ExplosionPower:3b,power:[0.0,1.0,0.0]}
-execute as @e[tag=portal,type=marker,tag=finished,scores={portalDeath=600..}] at @s unless block ~ ~2 ~ nether_portal run kill @s
+execute as @e[tag=portal,type=marker,tag=finished,scores={portalDeath=600..610}] at @s positioned ~ ~3 ~ run summon fireball ~ ~ ~ {ExplosionPower:3b,power:[0.0,1.0,0.0]}
+execute as @e[tag=portal,type=marker,tag=finished,scores={portalDeath=600..}] run kill @s
 execute unless entity @e[tag=portal,type=marker,tag=finished,scores={portalDeath=1..}] as @e[tag=portalDeath,limit=1,sort=random] run tag @s remove portalDeath
 
 # Uninvuln

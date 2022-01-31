@@ -64,7 +64,7 @@ execute as @e[type=minecraft:zombified_piglin,tag=!lagcontrol,limit=10,sort=rand
 
 scoreboard objectives add kill_ent dummy
 scoreboard objectives add kill_max dummy
-execute unless entity @e[name=dmain,scores={kill_max=0..}] run scoreboard players set @e[name=dmain] kill_max 500
+execute unless entity @e[name=dmain,scores={kill_max=0..}] run scoreboard players set @e[name=dmain] kill_max 400
 execute store result score @e[name=dmain] kill_ent if entity @e[tag=lagcontrol]
 scoreboard players operation @e[name=dmain] kill_ent -= @e[name=dmain] kill_max
 execute if entity @e[name=dmain,scores={kill_ent=1..}] as @e[tag=lagcontrol,limit=20,sort=random] run function world:lagcontrol/kill
@@ -88,6 +88,7 @@ execute if entity @e[name=dmain,scores={all_ent=1..}] run forceload remove all
 # execute if entity @e[name=dmain,scores={all_ent=1..}] run say [Minecraft Alive] - Max Entity Count Reached. Resetting ForceLoadedChunks...
 
 function world:lagcontrol/mobs/item
+function world:lagcontrol/mobs/sawayig
 
 # Ticker
 scoreboard players add @e[name=dmain] mobscrolltic 1

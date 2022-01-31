@@ -189,6 +189,33 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "muguk_bo"
+    },
+    {
+      "name": "KyakunutCrystal",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kyakunut_crystal"
+    },
+    {
+      "name": "KyaConduit",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kya_conduit"
+    },
+    {
+      "name": "KyaConduitRecipe",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kya_conduit_recipe"
     }
   ],
   "variable_elements": [],
@@ -209,7 +236,9 @@
       "block.mca.redfinesand": "Red Fine Sand",
       "item.mca.telaranrhoid": "Telaranrhoid Portal Igniter",
       "item.mca.fire_key_shard": "Fire Key Shard",
-      "item.mca.fire_key": "Fire Key"
+      "item.mca.kyakunut_crystal": "Ky?kunut Crystal",
+      "item.mca.fire_key": "Fire Key",
+      "item.mca.kya_conduit": "Ky? Conduit"
     }
   },
   "foldersRoot": {

@@ -45,3 +45,5 @@ execute as @a at @s unless block ~ ~-1 ~ mycelium run gamerule randomTickSpeed 3
 execute at @e[tag=blight] run particle minecraft:warped_spore ~ ~ ~ 10 10 10 0.1 100 force
 execute at @e[tag=blight] run particle minecraft:crimson_spore ~ ~ ~ 10 10 10 0.1 100 force
 
+execute as @e[type=villager,name=blight_creature] run effect give @s wither 100000 10
+execute if entity @e[type=marker,name=dmain,scores={atic=5..5}] as @e[type=villager,name=blight_creature] run say HEEEELLLLPPPPPPPP MMMMMEEEEEEEE!!!!!!!!!!!
