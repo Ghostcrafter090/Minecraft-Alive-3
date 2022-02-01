@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Medicine of Immunal Boost",
+    "splashName": "Splash Medicine of Immunal Boost",
+    "lingeringName": "Lingering Medicine of Immunal Boost",
+    "arrowName": "Arrow of Immunal Boost Medicine",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:ImmuneBoost"
+        },
+        "duration": 3600,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "RESISTANCE"
+        },
+        "duration": 400,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": false
+      },
+      {
+        "effect": {
+          "value": "HEALTH_BOOST"
+        },
+        "duration": 300,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}

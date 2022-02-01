@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Medicine of Weak Immunal Boost",
+    "splashName": "Splash Medicine of Weak Immunal Boost",
+    "lingeringName": "Lingering Medicine of Weak Immunal Boost",
+    "arrowName": "Arrow of Weak Immunal Boost Medicine",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:ImmuneBoost"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "RESISTANCE"
+        },
+        "duration": 400,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "HEALTH_BOOST"
+        },
+        "duration": 300,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

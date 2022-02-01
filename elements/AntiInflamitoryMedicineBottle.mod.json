@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Medicine of Energy",
+    "splashName": "Splash Medicine of Energy",
+    "lingeringName": "Lingering Medicine of Energy",
+    "arrowName": "Arrow of Energy Medicine",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:AntiInflamitoryMedicine"
+        },
+        "duration": 1800,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

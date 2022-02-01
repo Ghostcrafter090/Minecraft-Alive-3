@@ -1,0 +1,30 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Antidote",
+    "splashName": "Splash of Antidote",
+    "lingeringName": "Lingering of Antidote",
+    "arrowName": "Arrow of Antidote",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Antidote"
+        },
+        "duration": 1800,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "REGENERATION"
+        },
+        "duration": 800,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}

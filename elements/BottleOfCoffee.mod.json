@@ -1,0 +1,75 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Bottle of Coffee",
+    "splashName": "Spilling Bottle of Coffee",
+    "lingeringName": "Scalding Hot Wet Pants With Coffee",
+    "arrowName": "Why would you do this???",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Coffee"
+        },
+        "duration": 1800,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "SPEED"
+        },
+        "duration": 900,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": false
+      },
+      {
+        "effect": {
+          "value": "SLOWNESS"
+        },
+        "duration": 1800,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      },
+      {
+        "effect": {
+          "value": "HASTE"
+        },
+        "duration": 900,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": false
+      },
+      {
+        "effect": {
+          "value": "MINING_FATIGUE"
+        },
+        "duration": 1800,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      },
+      {
+        "effect": {
+          "value": "STRENGTH"
+        },
+        "duration": 900,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": false
+      },
+      {
+        "effect": {
+          "value": "WEAKNESS"
+        },
+        "duration": 1800,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}

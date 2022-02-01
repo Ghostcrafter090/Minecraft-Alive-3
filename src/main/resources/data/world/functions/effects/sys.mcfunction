@@ -18,10 +18,11 @@ scoreboard players operation @e[name=dmain,type=marker] blocktd = @e[name=dmain,
 scoreboard players add @e[name=dmain,type=marker] blocktd 5
 scoreboard players operation @e[name=dmain,type=marker] blocktd -= @e[name=dmain,type=marker] regud
 execute as @e[name=dmain,type=marker,scores={blocktd=..0}] run scoreboard players set @e[name=dmain,type=marker] regud 0
-execute as @e[name=dmain,type=marker,scores={regud=1..1}] run function world:effects/disease/diseasea
-execute as @e[name=dmain,type=marker,scores={regud=2..2}] run function world:effects/disease/diseaseb
-execute as @e[name=dmain,type=marker,scores={regud=3..3}] run function world:effects/disease/diseasec
-execute as @e[name=dmain,type=marker,scores={regud=4..4}] run function world:effects/disease/diseased
+function world:effects/disease/diseasea
+function world:effects/disease/diseaseb
+function world:effects/disease/diseasec
+function world:effects/disease/diseased
+# execute as @e[name=dmain,type=marker,scores={regud=<num>..<num>}] run function world:effects/disease/disease<sec>
 scoreboard objectives add dsreg dummy
 scoreboard players add @e[name=dmain,type=marker] dsreg 1
 execute as @e[name=dmain,type=marker,scores={dsreg=2..}] run scoreboard players set @s dsreg 0

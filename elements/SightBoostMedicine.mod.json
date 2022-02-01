@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Medicine of Very Weak Sight",
+    "splashName": "Splash Medicine of Very Weak Sight",
+    "lingeringName": "Lingering Medicine of Very Weak Sight",
+    "arrowName": "Arrow of Very Weak Sight Medicine",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:SightInducer"
+        },
+        "duration": 1200,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "NIGHT_VISION"
+        },
+        "duration": 200,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "BLINDNESS"
+        },
+        "duration": 100,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

@@ -10,6 +10,7 @@ scoreboard objectives add blocktc dummy
 scoreboard objectives add blockte dummy
 scoreboard objectives add blockt2 dummy
 scoreboard objectives add atic dummy
+scoreboard objectives add aticn dummy
 scoreboard objectives add atic2 dummy
 scoreboard objectives add regu dummy
 scoreboard objectives add regun dummy
@@ -68,14 +69,16 @@ execute if entity @e[type=marker,name=dmain,scores={regu=16..16}] as @e[name=dma
 execute if entity @e[type=marker,name=dmain,scores={regu=..1}] if entity @e[type=marker,name=dmain,scores={blockt=4..}] run function world:lagcontrol/moblag
 execute if entity @e[type=marker,name=dmain,scores={regu=1..1}] run kill @e[type=area_effect_cloud]
 scoreboard players add @e[type=marker,name=dmain] regun 1
-execute if entity @e[type=marker,name=dmain,scores={atic=20..20}] store result score @e[type=marker,name=dmain] blockt run worldborder get
-execute if entity @e[type=marker,name=dmain,scores={atic=20..20}] run function world:tickers/atic
-execute if entity @e[type=marker,name=dmain,scores={atic=20..20,blockt=2..}] run scoreboard players set @e[type=marker,name=dmain] regun 10
-execute if entity @e[type=marker,name=dmain,scores={atic=20..20,blockt=2..}] run scoreboard players operation @e[type=marker,name=dmain] regun -= @e[type=marker,name=dmain] blockt
-execute if entity @e[type=marker,name=dmain,scores={atic=20..20,blockt=2..}] run scoreboard players operation @e[type=marker,name=dmain] moriatic += @e[type=marker,name=dmain] blockt
-execute if entity @e[type=marker,name=dmain,scores={atic=20..20,blockt=2..}] unless entity @e[type=marker,name=dmain,scores={starttime=..12}] run scoreboard players operation @e[type=marker,name=dmain] starttime += @e[type=marker,name=dmain] blockt
-execute if entity @e[type=marker,name=dmain,scores={atic=21..}] run scoreboard players set @e[type=marker,name=dmain] atic 0
+execute if entity @e[type=marker,name=dmain,scores={aticn=4..4}] store result score @e[type=marker,name=dmain] blockt run worldborder get
+execute if entity @e[type=marker,name=dmain,scores={aticn=4..4}] run function world:tickers/atic
+execute if entity @e[type=marker,name=dmain,scores={aticn=4..4,blockt=2..}] run scoreboard players set @e[type=marker,name=dmain] regun 10
+execute if entity @e[type=marker,name=dmain,scores={aticn=4..4,blockt=2..}] run scoreboard players operation @e[type=marker,name=dmain] regun -= @e[type=marker,name=dmain] blockt
+execute if entity @e[type=marker,name=dmain,scores={aticn=4..4,blockt=2..}] run scoreboard players operation @e[type=marker,name=dmain] moriatic += @e[type=marker,name=dmain] blockt
+execute if entity @e[type=marker,name=dmain,scores={aticn=4..4,blockt=2..}] unless entity @e[type=marker,name=dmain,scores={starttime=..12}] run scoreboard players operation @e[type=marker,name=dmain] starttime += @e[type=marker,name=dmain] blockt
+execute if entity @e[type=marker,name=dmain,scores={aticn=5..}] run scoreboard players set @e[type=marker,name=dmain] aticn 0
+scoreboard players add @e[type=marker,name=dmain] aticn 1
 scoreboard players add @e[type=marker,name=dmain] atic 1
+execute if entity @e[type=marker,name=dmain,scores={atic=20..}] run scoreboard players set @e[type=marker,name=dmain] atic 0
 scoreboard players set @e[type=marker,name=dmain] blockt2 10000000
 
 # World Load

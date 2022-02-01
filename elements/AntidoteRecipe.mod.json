@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "POTION:CUSTOM:WeakAntidotalMedicine"
+    },
+    "brewingIngredientStack": {
+      "value": "Items.DYE#7"
+    },
+    "brewingReturnStack": {
+      "value": "POTION:CUSTOM:AntidotalMedicine"
+    },
+    "name": "antidote_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Weak Anti-Carcigenal Medicine",
+    "splashName": "Splash Weak Anti-Carcigenal Medicine",
+    "lingeringName": "Lingering Weak Anti-Carcigenal Medicine",
+    "arrowName": "Arrow of Weak Anti-Carcigenal Medicine",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:AntiCarcinogen"
+        },
+        "duration": 800,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "REGENERATION"
+        },
+        "duration": 100,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "SATURATION"
+        },
+        "duration": 50,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}

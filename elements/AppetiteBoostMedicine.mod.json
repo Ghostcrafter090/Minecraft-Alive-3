@@ -1,0 +1,30 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Medicine of Appetite",
+    "splashName": "Splash Medicine of Appetite",
+    "lingeringName": "Lingering Medicine of Appetite",
+    "arrowName": "Arrow of Appetite Medicine",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:AppetiteInducer"
+        },
+        "duration": 3600,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "SATURATION"
+        },
+        "duration": 500,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}

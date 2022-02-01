@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "POTION:CUSTOM:WeakAntiNauseaMedicine"
+    },
+    "brewingIngredientStack": {
+      "value": "Blocks.TALLGRASS#2"
+    },
+    "brewingReturnStack": {
+      "value": "POTION:CUSTOM:AntiNauseaMedication"
+    },
+    "name": "anti_nausea_recipe",
+    "namespace": "mod"
+  }
+}

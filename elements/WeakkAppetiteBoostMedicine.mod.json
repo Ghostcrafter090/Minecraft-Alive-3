@@ -1,0 +1,30 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Medicine of Weak Appetite",
+    "splashName": "Splash Medicine of Weak Appetite",
+    "lingeringName": "Lingering Medicine of Weak Appetite",
+    "arrowName": "Arrow of Weak Appetite Medicine",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:AppetiteInducer"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "SATURATION"
+        },
+        "duration": 400,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}
