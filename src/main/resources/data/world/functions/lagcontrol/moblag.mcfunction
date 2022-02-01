@@ -63,7 +63,7 @@ execute as @e[type=wolf,tag=!lagcontrol] unless data entity @s Owner run tag @s 
 execute as @e[type=wolf,tag=lagcontrol] if data entity @s Owner run tag @s remove lagcontrol
 execute as @e[type=minecraft:zombified_piglin,tag=!lagcontrol,limit=10,sort=random] run tag @s add lagcontrol
 
-execute if entity @e[name=dmain,scores={atic=10..10}] store result score @s test run gamerule logMcaDebug
+execute as @e[name=dmain,type=marker,scores={atic=10..10}] store result score @s logMcaDebug run gamerule logMcaDebug
 
 scoreboard objectives add kill_ent dummy
 scoreboard objectives add kill_max dummy

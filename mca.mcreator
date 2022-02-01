@@ -594,8 +594,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gamerule.logMcaDebug.description": "When true, Minecraft Alive will spit out debug messages as its performing operations. False by default.",
       "item.mca.water_key_shard": "Water Key Shard",
+      "gamerule.logMcaDebug.description": "When true, Minecraft Alive will spit out debug messages as its performing operations. False by default.",
       "effect.mca.sight_inducer": "Sight Medication",
       "item.minecraft.tipped_arrow.effect.bottle_of_coffee": "Why would you do this???",
       "item.minecraft.lingering_potion.effect.immunal_boost_medicine": "Lingering Medicine of Weak Immunal Boost",
