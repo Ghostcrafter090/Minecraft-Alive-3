@@ -25,11 +25,14 @@ scoreboard objectives add killMe dummy
 
 # dmain Fixer
 execute unless entity @e[type=marker,name=dmain] run summon marker 0 100 0 {CustomNameVisible:1b,NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,PersistenceRequired:1b,DisabledSlots:4144959,CustomName:'{"text":"dmain"}'}
+execute unless entity @e[name=dmain,type=marker,tag=runner] as @e[name=dmain,type=marker,tag=!runner,sort=random,limit=1] run tag @s add runner
 scoreboard players add @e[name=dmain,type=marker] timeAlive 1
-execute store result score @e[name=dmain,type=marker] dmainCount if entity @e[name=dmain]
+execute store result score @e[name=dmain,type=marker] dmainCount if entity @e[name=dmain,type=marker]
 scoreboard players set @e[name=dmain,type=marker] killMe 0
 execute as @e[name=dmain,type=marker,scores={dmainCount=2..}] run function world:killdmains
 execute as @e[name=dmain,type=marker,scores={dmainCount=2..},limit=1,sort=random] unless score @s killMe = @s timeAlive run kill @s
+execute as @e[name=dmain,tag=!runner,type=marker] run kill @s
+execute positioned 0 253 0 as @a[distance=0..20] run spreadplayers ~ ~ 20 260 false @s
 
 # Main Loops
 scoreboard objectives add rgfu dummy

@@ -5,10 +5,14 @@ license="Academic Free License v3.0"
 [[mods]]
 modId="mca"
 version="1.0.0"
-displayName="Minecraft Alive 2"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="joshp, MCreator"
+displayName="Minecraft Alive"
+credits="Ghostcrafter090, Nightshayd, Sabagegah"
+displayURL="http://gsweathermore.ddns.net"
+logoFile="logo.png"
+authors="Ghostcrafter090"
+description='''
+Makes many changes to the game, making the game feel more alive without changing the vanilla aspect!
+'''
 
 [[dependencies.mca]]
     modId="minecraft"

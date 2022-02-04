@@ -92,6 +92,7 @@ execute if entity @e[name=dmain,scores={all_ent=1..}] if entity @e[name=dmain,ty
 
 function world:lagcontrol/mobs/item
 function world:lagcontrol/mobs/sawayig
+function world:lagcontrol/mobs/vex
 
 # Ticker
 scoreboard players add @e[name=dmain] mobscrolltic 1
