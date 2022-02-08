@@ -22,7 +22,11 @@ execute as @a[scores={sneaktime=1..}] if entity @a[scores={climb=0..0,crouch=0..
 execute as @a[scores={streg=5..5}] run scoreboard players set @s streg 0
 scoreboard players add @a streg 1
 execute as @a[scores={streg1=2..2}] run scoreboard players set @s streg1 0
-execute as @a[scores={streg1=1..1}] run function world:effects/hotbardisp
+# execute as @a[scores={streg1=1..1}] run function world:effects/hotbardisp
+scoreboard objectives setdisplay sidebar.team.aqua thirst
+scoreboard objectives setdisplay sidebar.team.green stamina
+scoreboard objectives setdisplay sidebar.team.gold insomnia
+scoreboard objectives setdisplay sidebar.team.black DB
 scoreboard players add @a streg1 1
 execute as @a[scores={stamina=..0}] run scoreboard players set @s stamina 0
 execute as @a[scores={stamina=1500..}] run scoreboard players set @s stamina 1500
