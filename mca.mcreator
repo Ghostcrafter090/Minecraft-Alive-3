@@ -790,6 +790,27 @@
           }
         ]
       }
+    },
+    {
+      "name": "SatosusProject",
+      "type": "overlay",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "satosus_project"
+    },
+    {
+      "name": "ChannelLink",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "channel_link",
+      "metadata": {
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -1007,8 +1028,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.mca.water_key_shard": "Water Key Shard",
       "gamerule.logMcaDebug.description": "When true, Minecraft Alive will spit out debug messages as its performing operations. False by default.",
+      "item.mca.water_key_shard": "Water Key Shard",
       "effect.mca.sight_inducer": "Sight Medication",
       "item.minecraft.tipped_arrow.effect.bottle_of_coffee": "Why would you do this???",
       "item.minecraft.lingering_potion.effect.immunal_boost_medicine": "Lingering Medicine of Weak Immunal Boost",
@@ -1114,7 +1135,7 @@
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "modPicture": "anti_carcinogen",
+    "modPicture": "alive_logo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
