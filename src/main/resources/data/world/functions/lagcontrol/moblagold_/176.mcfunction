@@ -1,0 +1,3 @@
+
+kill @e[type=zoglin,limit=20,sort=random] 
+say [Minecraft Alive] - Max zoglin detected. Clearing... 

@@ -1,6 +1,3 @@
-# Author: PeerHeer
-#
-# Scale up a postitive double.
 
 execute if score $listutils.compare.long.low listutils.var matches 1..9 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_14
 execute if score $listutils.compare.long.low listutils.var matches 10..99 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_13

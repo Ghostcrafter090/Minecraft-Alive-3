@@ -1,6 +1,3 @@
-# Author: PeerHeer
-#
-# Scale up a negative double.
 
 execute if score $listutils.compare.long.low listutils.var matches ..-1000000000 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_5
 execute if score $listutils.compare.long.low listutils.var matches -999999999..-100000000 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_6

@@ -1,0 +1,31 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "You have pending magic book updates!",
+            "color": "dark_blue",
+            "bold": true,
+            "italic": true
+        },
+        "description": {
+            "text": "Put the book in a circle of green lit candles to upgrade it!",
+            "italic": true
+        },
+        "icon": {
+            "item": "minecraft:knowledge_book"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/bookshelf.png"
+    },
+    "criteria": {
+        "upgrade": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "experience": 5
+    }
+}

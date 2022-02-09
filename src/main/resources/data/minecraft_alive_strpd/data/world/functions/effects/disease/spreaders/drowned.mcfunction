@@ -1,3 +1,4 @@
+
 execute if entity @a[scores={reguz=4..4}] as @e[type=drowned] unless entity @s[scores={DB=1..1}] run scoreboard players set @s DB 1
 execute if entity @a[scores={reguz=1..1}] as @e[type=drowned] run scoreboard players add @s slow_minact_tier 1
 execute if entity @a[scores={reguz=2..2}] as @e[type=drowned,scores={slow_minact_tier=4..}] run scoreboard players set @s slow_minact_tier 1
@@ -41,12 +42,10 @@ execute if entity @a[scores={reguz=4..4}] as @e[type=drowned] run scoreboard pla
 execute if entity @a[scores={reguz=2..4}] as @e[type=drowned,scores={poi_boolean=2..}] run scoreboard players set @s poi_boolean 0
 execute if entity @a[scores={reguz=1..3}] as @e[type=drowned] run scoreboard players add @s poi_boolean 1
 execute if entity @a[scores={reguz=2..4}] as @e[type=drowned,scores={poi_max_tier=5..}] run scoreboard players set @s poi_max_tier 1
-execute if entity @a[scores={reguz=3..4}] as @e[type=drowned] run scoreboard players add @s poi_max_tier 1
-execute if entity @a[scores={reguz=3..4}] as @e[type=drowned,scores={with_minact_tier=2..}] run scoreboard players set @s with_minact_tier 1
+execute if entity @a[scores={reguz=3..4}] run function minecraft_alive_strpd:data/world/functions/effects/disease/spreaders/drowned_/43
 execute if entity @a[scores={reguz=4..4}] as @e[type=drowned] run scoreboard players add @s with_minact_tier 1
 execute if entity @a[scores={reguz=2..4}] as @e[type=drowned,scores={with_boolean=2..}] run scoreboard players set @s with_boolean 0
-execute if entity @a[scores={reguz=3..4}] as @e[type=drowned] run scoreboard players add @s with_boolean 1
-execute if entity @a[scores={reguz=3..4}] as @e[type=drowned,scores={with_max_tier=2..}] run scoreboard players set @s with_max_tier 1
+execute if entity @a[scores={reguz=3..4}] run function minecraft_alive_strpd:data/world/functions/effects/disease/spreaders/drowned_/46
 execute if entity @a[scores={reguz=1..1}] as @e[type=drowned] at @s as @e[type=!drowned,distance=0..1,scores={DT=..0}] run scoreboard players set @s DB 0
 execute if entity @a[scores={reguz=3..3}] as @e[type=drowned] at @s as @e[type=!drowned,distance=0..1,scores={DT=..0}] run scoreboard players set @s DB 0
 execute if entity @a[scores={reguz=5..5}] as @e[type=drowned] at @s as @e[type=!drowned,distance=0..1,scores={DT=..0}] run scoreboard players set @s DB 0

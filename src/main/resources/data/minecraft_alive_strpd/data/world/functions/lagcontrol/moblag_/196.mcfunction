@@ -1,0 +1,3 @@
+
+kill @e[tag=blight,limit=5,sort=random] 
+say [Minecraft Alive] - Max blight's detected. Clearing...

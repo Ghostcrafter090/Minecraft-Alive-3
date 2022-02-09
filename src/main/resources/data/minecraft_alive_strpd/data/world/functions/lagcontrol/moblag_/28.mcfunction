@@ -1,0 +1,3 @@
+
+kill @e[type=enderman,limit=5,sort=random] 
+say [Minecraft Alive] - Max enderman detected. Clearing... 

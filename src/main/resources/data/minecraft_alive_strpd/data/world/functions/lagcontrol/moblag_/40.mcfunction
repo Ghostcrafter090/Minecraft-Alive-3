@@ -1,0 +1,3 @@
+
+kill @e[type=evoker_fangs,limit=5,sort=random] 
+say [Minecraft Alive] - Max evoker_fangs detected. Clearing... 

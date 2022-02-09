@@ -1,8 +1,5 @@
 
-scoreboard objectives add vex_ent dummy 
-scoreboard objectives add vex_max dummy 
+function world:lagcontrol/mobs/vex_/0
 execute unless entity @e[name=dmain,scores={vex_max=0..}] run scoreboard players set @e[name=dmain] vex_max 35
-execute store result score @e[name=dmain] vex_ent if entity @e[type=vex] 
-scoreboard players operation @e[name=dmain] vex_ent -= @e[name=dmain] vex_max 
-execute if entity @e[name=dmain,scores={vex_ent=1..}] run kill @e[type=vex,limit=20,sort=random] 
-execute if entity @e[name=dmain,scores={vex_ent=1..}] if entity @e[name=dmain,type=marker,scores={logMcaDebug=1..1}] run say [Minecraft Alive] - Max vex detected. Clearing... 
+function world:lagcontrol/mobs/vex_/2
+execute if entity @e[name=dmain,scores={vex_ent=1..}] run function world:lagcontrol/mobs/vex_/3

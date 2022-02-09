@@ -1,0 +1,7 @@
+
+execute at @s unless entity @e[name=vilf,distance=0..100] run summon minecraft:marker ~ ~ ~ {CustomNameVisible:0b,NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,Tags:["vil"],CustomName:'{"text":"vilf"}'}
+execute at @s unless entity @e[name=vilf2,distance=0..100] run summon minecraft:marker ~ ~ ~ {CustomNameVisible:0b,NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,Tags:["vil"],CustomName:'{"text":"vilf2"}'}
+execute at @s unless entity @e[name=vilf3,distance=0..100] run summon minecraft:marker ~ ~ ~ {CustomNameVisible:0b,NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,Tags:["vil"],CustomName:'{"text":"vilf3"}'}
+execute at @s run spreadplayers ~ ~ 1 50 false @e[name=vilf,tag=vil]
+execute at @s run spreadplayers ~ ~ 1 50 false @e[name=vilf2,tag=vil]
+execute at @s run spreadplayers ~ ~ 1 50 false @e[name=vilf3,tag=vil]

@@ -1,3 +1,4 @@
+
 execute as @a[scores={wind=1..5}] if entity @s[scores={windspeed=8..8}] at @s run particle minecraft:cloud ~80 ~ ~ 1 10 10 8 5 force 
 execute as @a[scores={wind=5..10}] if entity @s[scores={windspeed=8..8}] at @s run particle minecraft:cloud ~80 ~ ~ 1 10 10 8 10 force 
 execute as @a[scores={wind=10..15}] if entity @s[scores={windspeed=8..8}] at @s run particle minecraft:cloud ~80 ~ ~ 1 10 10 8 15 force 

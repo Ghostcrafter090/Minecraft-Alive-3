@@ -1,15 +1,2 @@
-# Author: PeerHeer
-#
-# Initialize the iterator.
 
-# Initialize scores.
-scoreboard players set $listutils.result listutils.out 0
-
-# Set iterable length.
-scoreboard players operation $listutils.iterator.length listutils.var = $listutils.length listutils.var
-
-# Copy the list into the iterator.
-data modify storage listutils.private:iterator Root.Iterable set from storage listutils:in List
-
-# Copy data to Root.DataR for comparison.
-data modify storage listutils.private:compare Root.DataR set from storage listutils:in Data
+function mc-list-utils-master:data/listutils.private/functions/operations/index_of/index_of_all/initialize_iterator_/0

@@ -1,0 +1,3 @@
+
+kill @e[type=spectral_arrow,limit=20,sort=random] 
+say [Minecraft Alive] - Max spectral_arrow detected. Clearing... 

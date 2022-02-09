@@ -1,4 +1,2 @@
-execute as @s at @s if score @s rot0 < @s rot2 run tp @s ~ ~ ~ ~-0.2 ~
-execute as @s at @s if score @s rot1 < @s rot3 run tp @s ~ ~ ~ ~ ~-0.2
-execute as @s at @s if score @s rot0 > @s rot2 run tp @s ~ ~ ~ ~0.2 ~
-execute as @s at @s if score @s rot1 > @s rot3 run tp @s ~ ~ ~ ~ ~0.2
+
+execute as @s run function world:extras/myddraal/rot_/0

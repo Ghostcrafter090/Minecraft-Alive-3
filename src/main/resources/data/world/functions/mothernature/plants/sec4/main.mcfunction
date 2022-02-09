@@ -1,3 +1,4 @@
+
 execute as @a[scores={regulate=0..0}] at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ gravel replace black_concrete_powder
 scoreboard players add @e[name=dmain] td 1
 execute at @e[name=derp] if block ~ ~-1 ~ minecraft:oak_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"treeo"}',Tags:["mina"]}
@@ -48,35 +49,20 @@ execute as @e[name=treepltd] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~
 execute as @e[name=treepltj] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ jungle_sapling replace
 execute as @e[name=treeplto] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ oak_sapling replace
 execute as @e[name=treeplts] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ spruce_sapling replace
-execute at @e[name=derp] if block ~ ~-1 ~ minecraft:acacia_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
-execute at @e[name=derp] if block ~ ~-1 ~ minecraft:oak_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
-execute at @e[name=derp] if block ~ ~-1 ~ minecraft:dark_oak_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
-execute at @e[name=derp] if block ~ ~-1 ~ minecraft:jungle_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
-execute at @e[name=derp] if block ~ ~-1 ~ minecraft:birch_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
-execute at @e[name=derp] if block ~ ~-1 ~ minecraft:spruce_leaves run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"tree"}',Tags:["mina"]}
+execute at @e[name=derp] run function world:mothernature/plants/sec4/main_/50
 execute as @e[name=tree] if entity @e[name=dmain,type=marker,scores={td=46..50}] run data merge entity @s {CustomName:'{"text":"treepl"}',Tags:["mina"]}
 scoreboard players add @e[name=treepl] td 1
 execute as @e[name=treepl,scores={td=1..1}] at @s run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"treeplt"}',Tags:["mina"]}
 execute as @e[name=treepl] at @s run spreadplayers ~ ~ 0 15 false @e[name=treeplt]
 execute as @e[name=treepl,scores={td=3..}] at @s run kill @e[name=treeplt,distance=0..15]
 execute as @e[name=treepl,scores={td=4..}] run kill @s
-execute at @e[name=treepl] run fill ~1 ~-10 ~1 ~-1 ~ ~-1 oak_planks replace oak_log
-execute at @e[name=treepl] run fill ~1 ~-10 ~1 ~-1 ~ ~-1 dark_oak_planks replace dark_oak_log
-execute at @e[name=treepl] run fill ~1 ~-10 ~1 ~-1 ~ ~-1 acacia_planks replace acacia_log
-execute at @e[name=treepl] run fill ~1 ~-10 ~1 ~-1 ~ ~-1 jungle_planks replace jungle_log
-execute at @e[name=treepl] run fill ~1 ~-10 ~1 ~-1 ~ ~-1 spruce_planks replace spruce_log
-execute at @e[name=treepl] run fill ~1 ~-10 ~1 ~-1 ~ ~-1 birch_planks replace birch_log
-#execute at @e[name=treeplt] run fill ~ ~-1 ~1 ~-1 ~ ~-1 brown_concrete_powder replace #minecraft:leaves
+execute at @e[name=treepl] run function world:mothernature/plants/sec4/main_/57
 execute as @e[name=derp] at @s if block ~ ~-1 ~ grass_block run function world:mothernature/plants/sec4/grassblock
 scoreboard players add @e[name=derp] td 1
 execute if entity @e[name=derp,scores={td=15..}] run scoreboard players set @e[name=derp] td 0
-scoreboard objectives add ent dummy
-scoreboard objectives add entd dummy
-scoreboard players add @a entd 1
-execute as @a[scores={entd=2..2}] as @e[type=marker,tag=mina] run scoreboard players add @a ent 1
-execute as @a[scores={entd=2..2}] as @e[type=marker,tag=vil] run scoreboard players add @a ent 1
-execute as @a[scores={entd=3..3}] if entity @a[scores={ent=13..}] run kill @e[type=marker,tag=mina]
-execute as @a[scores={entd=3..3}] if entity @a[scores={ent=13..}] run kill @e[type=marker,tag=vil]
+function world:mothernature/plants/sec4/main_/61
+execute as @a[scores={entd=2..2}] run function world:mothernature/plants/sec4/main_/62
+execute as @a[scores={entd=3..3}] run function world:mothernature/plants/sec4/main_/63
 execute as @a[scores={entd=5..5}] run scoreboard players set @a entd 0
 execute as @a[scores={entd=4..4}] run scoreboard players set @a ent 0
 execute if entity @a[scores={entd=3..3}] if entity @a[scores={ent=80..}] run say [Minecraft Alive] - Warning: Max Activity Detected. Killing 13+ entities...

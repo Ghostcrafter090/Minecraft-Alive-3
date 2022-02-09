@@ -1,0 +1,3 @@
+
+kill @e[type=zombie,limit=5,sort=random] 
+say [Minecraft Alive] - Max zombie detected. Clearing... 

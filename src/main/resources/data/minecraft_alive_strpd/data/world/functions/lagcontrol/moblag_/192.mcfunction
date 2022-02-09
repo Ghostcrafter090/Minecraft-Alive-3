@@ -1,0 +1,3 @@
+
+kill @e[tag=sawayig,limit=5,sort=random] 
+say [Minecraft Alive] - Max Sawayig's detected. Clearing...

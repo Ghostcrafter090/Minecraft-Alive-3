@@ -1,0 +1,3 @@
+
+kill @e[type=zombified_piglin,limit=5,sort=random] 
+say [Minecraft Alive] - Max zombified_piglin detected. Clearing... 

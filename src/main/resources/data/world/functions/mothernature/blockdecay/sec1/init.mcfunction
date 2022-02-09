@@ -1,3 +1,4 @@
+
 scoreboard objectives add td dummy
 execute as @a at @s unless entity @e[name=derp,type=marker,distance=0..350] run summon minecraft:marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,CustomName:'{"text":"derp"}',Tags:["mina"]}
 execute as @e[name=derp,type=marker,scores={td=1..6}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ grass replace

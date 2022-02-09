@@ -1,3 +1,2 @@
-function listutils.private:operations/initialize
-function listutils.private:operations/index_of/index_of_last/index_of_last
-scoreboard players reset $listutils.function listutils.in
+
+function mc-list-utils-master:data/listutils.private/functions/index_of_last_/0

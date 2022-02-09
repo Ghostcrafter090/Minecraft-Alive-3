@@ -1,0 +1,3 @@
+
+kill @e[type=shulker,limit=5,sort=random] 
+say [Minecraft Alive] - Max shulker detected. Clearing... 

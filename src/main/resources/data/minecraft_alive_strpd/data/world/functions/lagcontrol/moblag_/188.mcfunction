@@ -1,0 +1,3 @@
+
+kill @e[type=fishing_bobber,limit=5,sort=random] 
+say [Minecraft Alive] - Max fishing_bobber detected. Clearing... 

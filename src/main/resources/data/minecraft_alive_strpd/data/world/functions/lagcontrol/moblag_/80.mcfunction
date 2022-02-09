@@ -1,0 +1,3 @@
+
+kill @e[type=phantom,limit=5,sort=random] 
+say [Minecraft Alive] - Max phantom detected. Clearing... 

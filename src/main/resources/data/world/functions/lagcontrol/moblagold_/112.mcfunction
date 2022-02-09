@@ -1,0 +1,3 @@
+
+kill @e[type=silverfish,limit=20,sort=random] 
+say [Minecraft Alive] - Max silverfish detected. Clearing... 

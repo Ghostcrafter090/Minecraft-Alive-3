@@ -1,6 +1,5 @@
-execute if entity @a[scores={regu=15..15}] run effect give @e[scores={airfill=1..1}] minecraft:water_breathing 1000000 5
-execute if entity @a[scores={regu=15..15}] run effect give @e[scores={airfill=1..1}] minecraft:resistance 1000000 5
-execute if entity @a[scores={regu=15..15}] run effect give @e[scores={airfill=1..1}] minecraft:fire_resistance 1000000 5
+
+execute if entity @a[scores={regu=15..15}] run function minecraft_alive_strpd:data/world/functions/moria/monsters/fire/main_/0
 execute if entity @e[name=dmain,scores={regu=2..12}] as @e[scores={airfill=1..1},limit=2,sort=random] at @s as @e[type=!player,distance=0.25] unless entity @s[type=item] unless entity @s[type=wither_skull] unless entity @s[scores={waterfill=1..1}] run scoreboard players set @s airfill 1
 execute if entity @e[name=dmain,scores={regu=1..1}] at @e[scores={airfill=1..1}] unless entity @e[name=dmain,scores={unload=1..1}] run forceload remove ~17 ~-17 ~17 ~-17
 execute if entity @e[name=dmain,scores={regu=1..11}] at @e[scores={airfill=1..1},limit=2,sort=random] run fill ~8 ~-8 ~8 ~-8 ~8 ~-8 fire replace lapis_ore
@@ -26,14 +25,3 @@ execute at @e[scores={airfill=1..1},limit=2,sort=random] run fill ~3 ~ ~3 ~-3 ~5
 execute as @e[scores={airfill=1..1}] at @s positioned ~ 45 ~ if entity @s[dy=200] run tp @s ~ ~-20 ~
 execute at @e[scores={airfill=1..1},limit=2,sort=random] run fill ~8 ~-8 ~8 ~-8 ~8 ~-8 lava replace water
 execute at @e[scores={airfill=1..1},type=bat,limit=2,sort=random] run fill ~5 ~-5 ~5 ~-5 ~5 ~-5 fire replace #minecraft:base_stone_overworld
-
-
-
-
-
-
-
-
-
-
-

@@ -1,2 +1,2 @@
-scoreboard players set $listutils.function listutils.in 0
-function listutils.private:fold_right
+
+function mc-list-utils-master:data/listutils.private/functions/sum_/0

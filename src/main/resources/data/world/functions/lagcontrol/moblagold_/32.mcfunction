@@ -1,0 +1,3 @@
+
+kill @e[type=endermite,limit=20,sort=random] 
+say [Minecraft Alive] - Max endermite detected. Clearing... 

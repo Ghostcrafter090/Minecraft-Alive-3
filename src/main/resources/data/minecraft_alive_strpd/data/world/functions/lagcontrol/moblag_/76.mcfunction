@@ -1,0 +1,3 @@
+
+kill @e[type=magma_cube,limit=5,sort=random] 
+say [Minecraft Alive] - Max magma_cube detected. Clearing... 

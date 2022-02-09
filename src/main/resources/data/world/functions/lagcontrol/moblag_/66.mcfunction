@@ -1,0 +1,3 @@
+
+forceload remove all
+execute if entity @e[name=dmain,type=marker,scores={logMcaDebug=1..1}] run say [Minecraft Alive] - Max Entity Count Reached. Resetting ForceLoadedChunks...

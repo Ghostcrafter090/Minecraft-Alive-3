@@ -1,0 +1,3 @@
+
+kill @e[type=ender_pearl,limit=5,sort=random] 
+say [Minecraft Alive] - Max ender_pearl detected. Clearing... 

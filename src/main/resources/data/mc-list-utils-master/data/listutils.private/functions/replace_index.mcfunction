@@ -1,4 +1,2 @@
-data modify storage listutils:out List set value []
-function listutils.private:operations/initialize
-function listutils.private:operations/replace/replace_index/main
-scoreboard players reset $listutils.index listutils.in
+
+function mc-list-utils-master:data/listutils.private/functions/replace_index_/0

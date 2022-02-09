@@ -1,0 +1,3 @@
+
+kill @e[type=stray,limit=20,sort=random] 
+say [Minecraft Alive] - Max stray detected. Clearing... 

@@ -1,0 +1,3 @@
+
+kill @e[type=vindicator,limit=5,sort=random] 
+say [Minecraft Alive] - Max vindicator detected. Clearing... 

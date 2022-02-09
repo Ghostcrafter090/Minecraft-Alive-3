@@ -1,8 +1,5 @@
 
-scoreboard objectives add shulker_ent dummy 
-scoreboard objectives add shulker_max dummy 
+function world:lagcontrol/mobs/shulker_/0
 execute unless entity @e[name=dmain,scores={shulker_max=0..}] run scoreboard players set @e[name=dmain] shulker_max 50 
-execute store result score @e[name=dmain] shulker_ent if entity @e[type=shulker] 
-scoreboard players operation @e[name=dmain] shulker_ent -= @e[name=dmain] shulker_max 
-execute if entity @e[name=dmain,scores={shulker_ent=1..}] run kill @e[type=shulker,limit=20,sort=random] 
-execute if entity @e[name=dmain,scores={shulker_ent=1..}] run say [Minecraft Alive] - Max shulker detected. Clearing... 
+function world:lagcontrol/mobs/shulker_/2
+execute if entity @e[name=dmain,scores={shulker_ent=1..}] run function world:lagcontrol/mobs/shulker_/3

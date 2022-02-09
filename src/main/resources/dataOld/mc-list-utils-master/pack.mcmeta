@@ -1,0 +1,6 @@
+{
+	"pack": {
+		"pack_format": 6,
+		"description": "A datapack that abstracts dynamic operations on NBT lists."
+	}
+}

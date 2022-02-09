@@ -1,6 +1,3 @@
-# Author: PeerHeer
-#
-# Scale up according to a score.
 
 execute if score $listutils.types.double.scale listutils.var matches 0 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_0
 execute if score $listutils.types.double.scale listutils.var matches 1 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_1
@@ -18,5 +15,4 @@ execute if score $listutils.types.double.scale listutils.var matches 12 run func
 execute if score $listutils.types.double.scale listutils.var matches 13 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_13
 execute if score $listutils.types.double.scale listutils.var matches 14 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_14
 execute if score $listutils.types.double.scale listutils.var matches 15 run function listutils.private:types/double/scale_up/scale_up_funcs/scale_up_int_15
-
 scoreboard players reset $listutils.types.double.scale listutils.var

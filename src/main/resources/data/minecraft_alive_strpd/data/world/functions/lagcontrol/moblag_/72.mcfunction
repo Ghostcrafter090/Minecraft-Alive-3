@@ -1,0 +1,3 @@
+
+kill @e[type=llama_spit,limit=5,sort=random] 
+say [Minecraft Alive] - Max llama_spit detected. Clearing... 

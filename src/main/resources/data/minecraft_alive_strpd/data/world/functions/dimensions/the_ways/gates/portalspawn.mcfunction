@@ -1,9 +1,5 @@
-# Define
-scoreboard objectives add createwaygate dummy
-scoreboard objectives add waygatedone dummy
-scoreboard objectives add waygatemake dummy
 
-# Main
+function minecraft_alive_strpd:data/world/functions/dimensions/the_ways/gates/portalspawn_/0
 execute unless entity @e[name=waygate,scores={waygatemake=0..114}] run scoreboard players add @a createwaygate 1
 execute if entity @a[scores={createwaygate=2..2}] unless entity @e[name=waygate,scores={waygatemake=0..114}] as @e[name=waygate] at @s unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ gravel run scoreboard players set @a[scores={createwaygate=2..}] createwaygate 1
 execute in minecraft:overworld as @a[distance=0..] at @s unless entity @e[name=waygate,distance=0..500] if entity @e[type=villager,distance=0..250] run scoreboard players set @s createwaygate 0

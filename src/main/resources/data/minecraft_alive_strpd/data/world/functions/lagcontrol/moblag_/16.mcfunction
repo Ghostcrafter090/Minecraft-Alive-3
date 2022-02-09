@@ -1,0 +1,3 @@
+
+kill @e[type=cave_spider,limit=5,sort=random] 
+say [Minecraft Alive] - Max cave_spider detected. Clearing... 

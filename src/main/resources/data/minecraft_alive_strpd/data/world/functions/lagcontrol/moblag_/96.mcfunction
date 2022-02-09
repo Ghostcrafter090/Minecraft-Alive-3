@@ -1,0 +1,3 @@
+
+kill @e[type=pufferfish,limit=5,sort=random] 
+say [Minecraft Alive] - Max pufferfish detected. Clearing... 

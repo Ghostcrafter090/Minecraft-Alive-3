@@ -1,0 +1,3 @@
+
+kill @e[type=small_fireball,limit=5,sort=random] 
+say [Minecraft Alive] - Max small_fireball detected. Clearing... 
