@@ -149,14 +149,14 @@ class main:
                 f = 0
                 if len(group[i][sets[i][n]]) > 1:
                     while f < len(group[i][sets[i][n]]):
-                        fileTexts[num] = fileTexts[num] + "\n" + ("execute " + group[i][sets[i][n]][f]).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute")
+                        fileTexts[num] = fileTexts[num] + "\n" + ("execute " + group[i][sets[i][n]][f]).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ")
                         f = f + 1
-                    mainFile = mainFile + "\n" + (sets[i][n] + " run function " + (main.convFuncPath(path).replace(":functions/", ":") + "_") + "/" + str(num)).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute")
+                    mainFile = mainFile + "\n" + (sets[i][n] + " run function " + (main.convFuncPath(path).replace(":functions/", ":") + "_") + "/" + str(num)).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ")
                 else:
-                    mainFile = mainFile + "\n" + (sets[i][n] + group[i][sets[i][n]][f]).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute")
+                    mainFile = mainFile + "\n" + (sets[i][n] + group[i][sets[i][n]][f]).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ")
                     f = 1
                 n = n + 1
-                fileTexts[num] = fileTexts[num].replace("execute run ", "").replace("executerun ", "").replace("exefuckute", "execute")
+                fileTexts[num] = fileTexts[num].replace("execute run ", "").replace("executerun ", "").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ")
                 num = num + 1
                 fileTexts.append("")
             i = i + 1

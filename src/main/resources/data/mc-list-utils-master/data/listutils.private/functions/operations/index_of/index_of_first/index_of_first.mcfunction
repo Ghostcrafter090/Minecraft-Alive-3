@@ -1,6 +1,6 @@
 
 execute if score $listutils.function listutils.in matches 0 run function listutils.private:operations/contains/exact_match/contains
-execute unless score $listutils.function listutils.in matches 0 run run function mc-list-utils-master:data/listutils.private/functions/operations/index_of/index_of_first/index_of_first_/1
+execute unless score $listutils.function listutils.in matches 0 run function mc-list-utils-master:data/listutils.private/functions/operations/index_of/index_of_first/index_of_first_/1
 execute if score $listutils.success listutils.out matches 0 run scoreboard players set $listutils.iterator.index listutils.var -1
 execute if score $listutils.success listutils.out matches 1 run function listutils.private:operations/index_of/index_of_first/iterate_start
 execute unless score $listutils.compare.result listutils.out matches 0 run scoreboard players set $listutils.iterator.index listutils.var -1

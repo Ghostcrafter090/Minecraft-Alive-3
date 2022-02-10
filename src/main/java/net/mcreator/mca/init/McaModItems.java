@@ -22,6 +22,12 @@ import net.mcreator.mca.item.FireKeyShardItem;
 import net.mcreator.mca.item.FireKeyItem;
 import net.mcreator.mca.item.EndKeyItem;
 import net.mcreator.mca.item.DefunctEndKeyItem;
+import net.mcreator.mca.item.CopperSwordItem;
+import net.mcreator.mca.item.CopperShovelItem;
+import net.mcreator.mca.item.CopperPickaxeItem;
+import net.mcreator.mca.item.CopperHoeItem;
+import net.mcreator.mca.item.CopperAxeItem;
+import net.mcreator.mca.item.CopperArmorItem;
 import net.mcreator.mca.item.AnchientPageItem;
 
 import java.util.List;
@@ -44,6 +50,15 @@ public class McaModItems {
 	public static final Item ANCHIENT_PAGE = register(new AnchientPageItem());
 	public static final Item KYAKUNUT_CRYSTAL = register(new KyakunutCrystalItem());
 	public static final Item KYA_CONDUIT = register(new KyaConduitItem());
+	public static final Item COPPER_ARMOR_HELMET = register(new CopperArmorItem.Helmet());
+	public static final Item COPPER_ARMOR_CHESTPLATE = register(new CopperArmorItem.Chestplate());
+	public static final Item COPPER_ARMOR_LEGGINGS = register(new CopperArmorItem.Leggings());
+	public static final Item COPPER_ARMOR_BOOTS = register(new CopperArmorItem.Boots());
+	public static final Item COPPER_PICKAXE = register(new CopperPickaxeItem());
+	public static final Item COPPER_AXE = register(new CopperAxeItem());
+	public static final Item COPPER_SHOVEL = register(new CopperShovelItem());
+	public static final Item COPPER_HOE = register(new CopperHoeItem());
+	public static final Item COPPER_SWORD = register(new CopperSwordItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

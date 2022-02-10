@@ -41,7 +41,7 @@ execute as @a[scores={streg=1..1}] run scoreboard players set @s sneaktime 0
 execute as @a[scores={streg=1..4}] run scoreboard players set @s swim 0
 execute as @a[scores={streg=1..4}] run scoreboard players set @s walkowater 0
 execute as @a[scores={streg=1..4}] run scoreboard players set @s walk 0
-execute as @a[scores={walk=1..}] run scoreboard players add @a stamina 20
+execute as @a[scores={walk=1..}] run scoreboard players add @a stamina 40
 execute as @a[scores={streg=1..5}] run scoreboard players set @s walkuwater 0
 execute as @a run scoreboard players operation @s stamina -= @s climb
 execute as @a run scoreboard players operation @s stamina -= @s crouch

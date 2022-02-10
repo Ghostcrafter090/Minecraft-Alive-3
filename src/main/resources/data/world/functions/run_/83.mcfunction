@@ -1,3 +1,3 @@
 
-execute at @s run playsound minecraft:ambient.basalt_deltas.additions master @a ~ ~ ~ 1 2
-execute at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute as @e[tag=sawayig] if entity @s[tag=stuck] if entity @s[tag=blight] as @a run scoreboard players add @s blightEnter 2
+execute as @a unless entity @s[scores={air=..10},distance=0..1000] if entity @s[scores={blightEnter=-5..}] run scoreboard players remove @s blightEnter 1

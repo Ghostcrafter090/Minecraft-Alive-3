@@ -1,3 +1,3 @@
 
-execute at @s run playsound minecraft:ambient.basalt_deltas.additions master @a ~ ~ ~ 1 2
-execute at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 1 0 0.3 10 force
+execute positioned 0 100 0 as @a[distance=0..3000] if entity @s[scores={air=..10}] run scoreboard players add @s blightExit 1
+execute positioned 0 100 0 as @a[distance=0..3000] unless entity @s[scores={air=..10}] if entity @s[scores={blightExit=-5..}] run scoreboard players remove @s blightExit 1

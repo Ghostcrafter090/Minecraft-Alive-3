@@ -23,6 +23,10 @@ scoreboard objectives add dmainCount dummy
 scoreboard objectives add timeAlive dummy
 scoreboard objectives add killMe dummy
 
+# Thirst fixer
+execute as @a[tag=!spawned] run scoreboard players set @s thirst 100
+execute as @a[tag=!spawned] run tag @s add spawned
+
 # dmain Fixer
 execute unless entity @e[type=marker,name=dmain] run summon marker 0 100 0 {CustomNameVisible:1b,NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,PersistenceRequired:1b,DisabledSlots:4144959,CustomName:'{"text":"dmain"}'}
 execute unless entity @e[name=dmain,type=marker,tag=runner] as @e[name=dmain,type=marker,tag=!runner,sort=random,limit=1] run tag @s add runner

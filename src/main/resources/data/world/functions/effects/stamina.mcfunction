@@ -18,7 +18,7 @@ execute as @a[scores={streg=1..4,jump=0..0}] run scoreboard players set @s sprin
 execute as @a[scores={streg=1..5,jump=0..0}] at @s if block ~ ~ ~ water run scoreboard players set @s sprint 0
 execute as @a[scores={streg=1..1}] run scoreboard players set @s sneaktime 0
 execute as @a[scores={streg=1..4}] run function world:effects/stamina_/18
-execute as @a[scores={walk=1..}] run scoreboard players add @a stamina 20
+execute as @a[scores={walk=1..}] run scoreboard players add @a stamina 40
 execute as @a[scores={streg=1..5}] run scoreboard players set @s walkuwater 0
 execute as @a run function world:effects/stamina_/21
 execute as @a[scores={insomnia=25000..,streg1=1..1}] run scoreboard players remove @a stamina 1
