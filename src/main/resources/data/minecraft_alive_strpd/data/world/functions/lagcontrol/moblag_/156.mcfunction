@@ -1,3 +1,0 @@
-
-kill @e[type=potion,limit=5,sort=random] 
-say [Minecraft Alive] - Max potion detected. Clearing... 

@@ -6,7 +6,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.api.distmarker.Dist;
-import net.mcreator.mca.network.McaModVariables;
+
+import net.mcreator.mca.procedures.GetConfigProcedure;
+import net.mcreator.mca.network.McaModVariables;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -60,22 +62,24 @@ public class InsomniaDisplayOverlay {
 				inMain = (entity.getCapability(McaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new McaModVariables.PlayerVariables())).insomnia - 1;
 			}
 			inMainVar.set(inMain);
-			int i = 0;
-			int l = 0;
-			double testVar = 6560;
-			while ((i < 16) && (l != 1)) {
-				if (inMain < testVar) {
-					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/moon_" + Integer.toString(i) + ".png"));
-					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -10, posY + intf, 0, 0, 20, 19, 20, 19);
-					l = 1;
-					i = 16;
+			if (GetConfigProcedure.enableInsomnia == 1) {
+				int i = 0;
+				int l = 0;
+				double testVar = 6560;
+				while ((i < 16) && (l != 1)) {
+					if (inMain < testVar) {
+						RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/moon_" + Integer.toString(i) + ".png"));
+						Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -10, posY + intf, 0, 0, 20, 19, 20, 19);
+						l = 1;
+						i = 16;
+					}
+					i = i + 1;
+					testVar = testVar + 6560;
 				}
-				i = i + 1;
-				testVar = testVar + 6560;
-			}
-			if (l != 1) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/moon_15.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -10, posY + intf, 0, 0, 20, 19, 20, 19);
+				if (l != 1) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/moon_15.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -10, posY + intf, 0, 0, 20, 19, 20, 19);
+				}
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();

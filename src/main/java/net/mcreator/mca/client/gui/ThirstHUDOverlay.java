@@ -6,7 +6,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.api.distmarker.Dist;
+
 import net.mcreator.mca.network.McaModVariables;
+import net.mcreator.mca.procedures.GetConfigProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -56,105 +58,107 @@ public class ThirstHUDOverlay {
 				thMain = (entity.getCapability(McaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new McaModVariables.PlayerVariables())).Thirst - 1;
 			}
 			thMainVar.set(thMain);
-			if (thMain > 95) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -21, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 90) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -21, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -21, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 85) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -29, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 80) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -29, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -29, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 75) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -37, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 70) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -37, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -37, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 65) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -45, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 60) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -45, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -45, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 55) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -53, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 50) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -53, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -53, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 45) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -61, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 40) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -61, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -61, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 35) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -69, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 30) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -69, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -69, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 25) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -77, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 20) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -77, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -77, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 15) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -85, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 10) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -85, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -85, posY + intf, 0, 0, 10, 12, 10, 12);
-			}
-			if (thMain > 5) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -93, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else if (thMain > 1) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -93, posY + intf, 0, 0, 10, 12, 10, 12);
-			} else {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -93, posY + intf, 0, 0, 10, 12, 10, 12);
+			if (GetConfigProcedure.enableThirst == 1) {
+				if (thMain > 95) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -21, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 90) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -21, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -21, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 85) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -29, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 80) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -29, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -29, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 75) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -37, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 70) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -37, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -37, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 65) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -45, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 60) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -45, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -45, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 55) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -53, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 50) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -53, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -53, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 45) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -61, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 40) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -61, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -61, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 35) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -69, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 30) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -69, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -69, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 25) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -77, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 20) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -77, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -77, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 15) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -85, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 10) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -85, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -85, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
+				if (thMain > 5) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_f.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -93, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else if (thMain > 1) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thirst_h.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -93, posY + intf, 0, 0, 10, 12, 10, 12);
+				} else {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/thist_e.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -93, posY + intf, 0, 0, 10, 12, 10, 12);
+				}
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();

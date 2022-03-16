@@ -1,11 +1,11 @@
 modLoader="javafml"
-loaderVersion="[37,)"
+loaderVersion="[39,)"
 license="Academic Free License v3.0"
 
 [[mods]]
 modId="mca"
-version="1.0.0"
-displayName="Minecraft Alive"
+version="1.8.2"
+displayName="Alive | Dynamic Eco Systems & Boss Progression"
 credits="Ghostcrafter090, Nightshayd, Sabagegah"
 displayURL="http://gsweathermore.ddns.net"
 logoFile="logo.png"
@@ -17,7 +17,7 @@ Makes many changes to the game, making the game feel more alive without changing
 [[dependencies.mca]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.17.1]"
+    versionRange="[1.18.1]"
     ordering="NONE"
     side="BOTH"
 

@@ -73,9 +73,9 @@ execute as @a[scores={enteredBlight=1..1}] unless entity @s[scores={progScore=6.
 execute as @a[scores={exitedBlight=1..}] unless entity @s[scores={progScore=7..}] run scoreboard players set @s progScore 7
 execute as @a[scores={fireKeySpawned=1..1}] unless entity @s[scores={progScore=8..}] run scoreboard players set @s progScore 8
 execute as @a[scores={withBossKill=1..}] unless entity @s[scores={progScore=9..}] run scoreboard players set @s progScore 9
-execute as @a at @s in minecraft:overworld if entity @s[distance=0..1] store result score @s jTempleDistance run locate jungle_pyramid
+execute if entity @e[name=dmain,type=marker,scores={atic=8..8}] as @a at @s in minecraft:overworld if entity @s[distance=0..1] store result score @s jTempleDistance run locate jungle_pyramid
 execute as @a[scores={jTempleDistance=..50}] at @s in minecraft:overworld if entity @s[distance=0..1] run scoreboard players set @s jTemple 1
-execute as @a[scores={jTemple=1..1}] unless entity @s[scores={progScore=10..}] run scoreboard players set @s progScore 10
+execute as @a[scores={jTemple=1..1}] if entity @s[scores={withBossKill=1..}] unless entity @s[scores={progScore=10..}] run scoreboard players set @s progScore 10
 execute as @a[scores={endKeySpawn=1..1}] unless entity @s[scores={progScore=11..}] run scoreboard players set @s progScore 11
 execute as @a unless score @s progScore = @s progScoreOld run advancement grant @s only world:root
 execute as @a if score @s progScore = @s progScoreOld run advancement revoke @s only world:root

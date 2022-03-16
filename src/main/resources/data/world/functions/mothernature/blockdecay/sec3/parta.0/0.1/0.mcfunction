@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fill ~ ~-1 ~ ~ ~-1 ~ sandstone replace cut_sandstone
+fill ~ ~-1 ~ ~ ~-1 ~ red_sandstone replace chiseled_red_sandstone
+fill ~ ~-1 ~ ~ ~-1 ~ red_sandstone replace smooth_red_sandstone
+fill ~ ~-1 ~ ~ ~-1 ~ red_sandstone replace cut_red_sandstone
+fill ~ ~-1 ~ ~ ~-1 ~ white_concrete_powder replace white_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ orange_concrete_powder replace orange_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ magenta_concrete_powder replace magenta_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ light_blue_concrete_powder replace light_blue_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ yellow_concrete_powder replace yellow_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ lime_concrete_powder replace lime_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ pink_concrete_powder replace pink_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ gray_concrete_powder replace gray_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ light_gray_concrete_powder replace light_gray_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ cyan_concrete_powder replace cyan_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ purple_concrete_powder replace purple_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ blue_concrete_powder replace blue_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ orange_concrete_powder replace brown_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ green_concrete_powder replace green_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ red_concrete_powder replace red_concrete
+fill ~ ~-1 ~ ~ ~-1 ~ black_concrete_powder replace black_concrete

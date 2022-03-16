@@ -1,3 +1,0 @@
-
-data merge entity @s {CustomNameVisible:0b,PersistenceRequired:1b,Tags:["blight"],CustomName:'{"text":"blight_creature"}',ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:9408399}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:9408399}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:9408399}}},{id:"minecraft:light_gray_concrete",Count:1b}],ActiveEffects:[{Id:10b,Amplifier:20b,Duration:11},{Id:11b,Amplifier:5b,Duration:11}],Attributes:[{Name:generic.max_health,Base:10},{Name:generic.follow_range,Base:6},{Name:generic.movement_speed,Base:1},{Name:generic.attack_damage,Base:1},{Name:generic.attack_knockback,Base:0}]}
-execute at @s run function minecraft_alive_strpd:data/world/functions/blight/infect_/1

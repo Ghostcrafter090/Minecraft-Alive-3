@@ -1,3 +1,0 @@
-
-kill @e[type=witch,limit=5,sort=random] 
-say [Minecraft Alive] - Max witch detected. Clearing... 

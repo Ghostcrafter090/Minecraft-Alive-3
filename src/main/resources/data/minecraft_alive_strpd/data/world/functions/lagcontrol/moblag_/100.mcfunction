@@ -1,3 +1,0 @@
-
-kill @e[type=salmon,limit=5,sort=random] 
-say [Minecraft Alive] - Max salmon detected. Clearing... 

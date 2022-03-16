@@ -1,4 +1,3 @@
-
 package net.mcreator.mca.client.gui;
 
 import java.awt.event.KeyListener;
@@ -8,7 +7,7 @@ import javax.swing.JFrame;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.client.event.GuiScreenEvent;
+import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
@@ -21,10 +20,10 @@ import net.mcreator.mca.procedures.ChannelLinkProcedure;
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class SatosusProjectOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
-	public static void eventHandler(GuiScreenEvent.DrawScreenEvent.Post event) {
-		if (event.getGui() instanceof TitleScreen) {
-			int w = event.getGui().width;
-			int h = event.getGui().height;
+	public static void eventHandler(ScreenEvent.DrawScreenEvent.Post event) {
+		if (event.getScreen() instanceof TitleScreen) {
+			int w = event.getScreen().width;
+			int h = event.getScreen().height;
 			int posX = w / 2;
 			int posY = h / 2;
 			Level _world = null;
@@ -43,8 +42,8 @@ public class SatosusProjectOverlay {
 			double y = _y;
 			double z = _z;
 			if (true) {
-				Minecraft.getInstance().font.draw(event.getMatrixStack(), "Alive | A Mod by The Satosus Project!", posX + -93, posY - (posY - 11), -1);
-				Minecraft.getInstance().font.draw(event.getMatrixStack(), "Check us out on youtube!", posX + -57, posY - (posY - 20), -3355444);
+				Minecraft.getInstance().font.draw(event.getPoseStack(), "Alive | A Mod by The Satosus Project!", posX + -93, posY - (posY - 11), -1);
+				Minecraft.getInstance().font.draw(event.getPoseStack(), "Check us out on youtube!", posX + -57, posY - (posY - 20), -3355444);
 			}
 		}
 	}

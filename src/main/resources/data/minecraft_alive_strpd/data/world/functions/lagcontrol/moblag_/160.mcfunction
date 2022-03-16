@@ -1,3 +1,0 @@
-
-kill @e[type=vex,limit=5,sort=random] 
-say [Minecraft Alive] - Max vex detected. Clearing... 

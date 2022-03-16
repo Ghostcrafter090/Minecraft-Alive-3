@@ -1,3 +1,0 @@
-
-kill @e[type=shulker_bullet,limit=5,sort=random] 
-say [Minecraft Alive] - Max shulker_bullet detected. Clearing... 

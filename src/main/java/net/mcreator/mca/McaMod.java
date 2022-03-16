@@ -13,12 +13,13 @@
  */
 package net.mcreator.mca;
 
+import net.minecraftforge.network.simple.SimpleChannel;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-import net.minecraftforge.fmllegacy.network.simple.SimpleChannel;
-import net.minecraftforge.fmllegacy.network.NetworkRegistry;
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import net.minecraft.resources.ResourceLocation;

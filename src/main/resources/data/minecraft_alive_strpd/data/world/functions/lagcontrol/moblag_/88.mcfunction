@@ -1,3 +1,0 @@
-
-kill @e[type=piglin,limit=5,sort=random] 
-say [Minecraft Alive] - Max piglin detected. Clearing... 

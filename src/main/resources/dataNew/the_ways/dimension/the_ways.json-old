@@ -1,0 +1,132 @@
+{
+  "type": {
+    "name": "minecraft:the_ways",
+    "ultrawarm": true,
+    "natural": false,
+    "piglin_safe": true,
+    "respawn_anchor_works": true,
+    "bed_works": false,
+    "has_raids": true,
+    "has_skylight": true,
+    "has_ceiling": false,
+    "coordinate_scale": 32,
+    "ambient_light": 0,
+    "logical_height": 256,
+    "infiniburn": "minecraft:infiniburn_overworld",
+    "min_y": 0,
+    "height": 256,
+    "effects": "minecraft:the_overworld"
+  },
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": 1671819167,
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "seed": 1671819167,
+      "biome": "minecraft:soul_sand_valley",
+      "altitude_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "temperature_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "humidity_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "weirdness_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "biomes": [
+        {
+          "biome": "minecraft:plains",
+          "parameters": {
+            "altitude": 0,
+            "temperature": 0,
+            "humidity": 0,
+            "weirdness": 0,
+            "offset": 0
+          }
+        }
+      ]
+    },
+    "settings": {
+      "name": "minecraft:the_ways",
+      "bedrock_roof_position": -10,
+      "bedrock_floor_position": -10,
+      "sea_level": 63,
+      "disable_mob_generation": false,
+      "default_block": {
+        "Name": "minecraft:blackstone"
+      },
+      "default_fluid": {
+        "Name": "minecraft:air",
+        "Properties": {
+          "level": "0"
+        }
+      },
+      "noise": {
+        "height": 256,
+        "density_factor": 0,
+        "density_offset": 0,
+        "size_horizontal": 1,
+        "size_vertical": 1,
+        "simplex_surface_noise": true,
+        "sampling": {
+          "xz_scale": 0.3,
+          "y_scale": 1,
+          "xz_factor": 80,
+          "y_factor": 100
+        },
+        "bottom_slide": {
+          "target": -30,
+          "size": 0,
+          "offset": 0
+        },
+        "top_slide": {
+          "target": -10,
+          "size": 0,
+          "offset": 0
+        },
+        "min_y": 0,
+        "random_density_offset": false,
+        "island_noise_override": true,
+        "amplified": false
+      },
+      "structures": {
+        "structures": {
+          "minecraft:fortress": {
+            "spacing": 1,
+            "separation": 0,
+            "salt": 334984598
+          },
+          "minecraft:ruined_portal": {
+            "spacing": 10,
+            "separation": 5,
+            "salt": 0
+          },
+          "minecraft:mineshaft": {
+            "spacing": 1,
+            "separation": 0,
+            "salt": 0
+          }
+        }
+      }
+    }
+  }
+}

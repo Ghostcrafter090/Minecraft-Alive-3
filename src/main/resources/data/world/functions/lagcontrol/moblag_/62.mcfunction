@@ -1,3 +1,0 @@
-
-kill @e[scores={airfill=1..1},limit=4,sort=random,tag=!dimensional]
-execute if entity @e[name=dmain,type=marker,scores={logMcaDebug=1..1}] run say [Minecraft Alive] - Max moria entities detected. Clearing...

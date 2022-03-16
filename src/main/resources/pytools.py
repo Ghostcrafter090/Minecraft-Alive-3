@@ -139,12 +139,12 @@ class IO:
             print("Unexpected error:", sys.exc_info())
             error = 1
         return error
-    
-    def saveList(path, list: Array):
+
+    def saveList(path, listf: Array):
         error = 0
         try:
             file = open(path, "wb")
-            pickle.dump(list, file)
+            pickle.dump(listf, file)
             file.close()
         except:
             print("Unexpected error:", sys.exc_info())

@@ -1,3 +1,0 @@
-
-kill @e[type=experience_orb,limit=5,sort=random] 
-say [Minecraft Alive] - Max experience_orb detected. Clearing... 

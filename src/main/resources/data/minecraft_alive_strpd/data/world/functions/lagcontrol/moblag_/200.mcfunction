@@ -1,3 +1,0 @@
-
-kill @e[name=machin_shin,limit=5,sort=random] 
-say [Minecraft Alive] - Max Machin Shin activity detected. Clearing...

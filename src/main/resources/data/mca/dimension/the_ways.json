@@ -1,0 +1,117 @@
+{
+    "type": "mca:the_ways",
+    "generator": {
+        "type": "minecraft:noise",
+        "seed": -1885856506,
+        "settings": {
+            "name": "mca:the_ways",
+            "sea_level": -64,
+            "disable_mob_generation": false,
+            "noise_caves_enabled": true,
+            "noodle_caves_enabled": true,
+            "aquifers_enabled": false,
+            "ore_veins_enabled": false,
+            "legacy_random_source": false,
+            "default_block": {
+                "Name": "minecraft:blackstone"
+            },
+            "default_fluid": {
+                "Name": "minecraft:air"
+            },
+            "noise": {
+                "min_y": -64,
+                "height": 256,
+                "size_horizontal": 2,
+                "size_vertical": 1,
+                "island_noise_override": true,
+                "sampling": {
+                    "xz_scale": 2,
+                    "y_scale": 1,
+                    "xz_factor": 80,
+                    "y_factor": 160
+                },
+                "bottom_slide": {
+                    "target": -30,
+                    "size": 7,
+                    "offset": 1
+                },
+                "top_slide": {
+                    "target": -3000,
+                    "size": 64,
+                    "offset": -46
+                },
+                "terrain_shaper": {
+                    "offset": 0,
+                    "factor": 0,
+                    "jaggedness": 0
+                }
+            },
+            "surface_rule": {
+                "type": "minecraft:block",
+                "result_state": {
+                    "Name": "minecraft:andesite"
+                }
+            },
+            "structures": {
+                "structures": {
+                    "minecraft:fortress": {
+                        "spacing": 5,
+                        "separation": 2,
+                        "salt": 0
+                    },
+                    "minecraft:ruined_portal": {
+                        "spacing": 10,
+                        "separation": 5,
+                        "salt": 0
+                    },
+                    "minecraft:mineshaft": {
+                        "spacing": 5,
+                        "separation": 3,
+                        "salt": 0
+                    }
+                }
+            }
+        },
+        "biome_source": {
+            "type": "minecraft:multi_noise",
+            "biomes": [
+                {
+                    "biome": "minecraft:soul_sand_valley",
+                    "parameters": {
+                        "temperature": -1,
+                        "humidity": -1,
+                        "continentalness": 1,
+                        "erosion": 0,
+                        "weirdness": 1,
+                        "depth": 0,
+                        "offset": 0
+                    }
+                },
+                {
+                    "biome": "minecraft:warped_forest",
+                    "parameters": {
+                        "temperature": -1.5,
+                        "humidity": -1,
+                        "continentalness": 0.3,
+                        "erosion": 0,
+                        "weirdness": 1,
+                        "depth": 0,
+                        "offset": 0
+                    }
+                },
+                {
+                    "biome": "minecraft:basalt_deltas",
+                    "parameters": {
+                        "temperature": -1.38,
+                        "humidity": -1,
+                        "continentalness": 0.43,
+                        "erosion": 0,
+                        "weirdness": 1,
+                        "depth": 0,
+                        "offset": 0
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -72,12 +72,4 @@ scoreboard players add @e[name=derp] td 1
 execute if entity @e[name=derp,scores={td=15..}] run scoreboard players set @e[name=derp] td 0
 scoreboard objectives add ent dummy
 scoreboard objectives add entd dummy
-scoreboard players add @a entd 1
-execute as @a[scores={entd=2..2}] as @e[type=marker,tag=mina] run scoreboard players add @a ent 1
-execute as @a[scores={entd=2..2}] as @e[type=marker,tag=vil] run scoreboard players add @a ent 1
-execute as @a[scores={entd=3..3}] if entity @a[scores={ent=13..}] run kill @e[type=marker,tag=mina]
-execute as @a[scores={entd=3..3}] if entity @a[scores={ent=13..}] run kill @e[type=marker,tag=vil]
-execute as @a[scores={entd=5..5}] run scoreboard players set @a entd 0
-execute as @a[scores={entd=4..4}] run scoreboard players set @a ent 0
-execute if entity @a[scores={entd=3..3}] if entity @a[scores={ent=80..}] run say [Minecraft Alive] - Warning: Max Activity Detected. Killing 13+ entities...
 execute as @e[name=dmain,scores={td=50..}] run scoreboard players set @s td 0

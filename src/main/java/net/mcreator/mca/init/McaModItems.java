@@ -15,20 +15,19 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.mca.item.WaterKeyShardItem;
 import net.mcreator.mca.item.WaterKeyItem;
-import net.mcreator.mca.item.TheBlightItem;
 import net.mcreator.mca.item.KyakunutCrystalItem;
 import net.mcreator.mca.item.KyaConduitItem;
 import net.mcreator.mca.item.FireKeyShardItem;
 import net.mcreator.mca.item.FireKeyItem;
 import net.mcreator.mca.item.EndKeyItem;
 import net.mcreator.mca.item.DefunctEndKeyItem;
+import net.mcreator.mca.item.AnchientPageItem;
 import net.mcreator.mca.item.CopperSwordItem;
 import net.mcreator.mca.item.CopperShovelItem;
 import net.mcreator.mca.item.CopperPickaxeItem;
 import net.mcreator.mca.item.CopperHoeItem;
 import net.mcreator.mca.item.CopperAxeItem;
 import net.mcreator.mca.item.CopperArmorItem;
-import net.mcreator.mca.item.AnchientPageItem;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -46,7 +45,6 @@ public class McaModItems {
 	public static final Item FIRE_KEY = register(new FireKeyItem());
 	public static final Item DEFUNCT_END_KEY = register(new DefunctEndKeyItem());
 	public static final Item END_KEY = register(new EndKeyItem());
-	public static final Item THE_BLIGHT = register(new TheBlightItem());
 	public static final Item ANCHIENT_PAGE = register(new AnchientPageItem());
 	public static final Item KYAKUNUT_CRYSTAL = register(new KyakunutCrystalItem());
 	public static final Item KYA_CONDUIT = register(new KyaConduitItem());

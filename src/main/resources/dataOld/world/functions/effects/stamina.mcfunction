@@ -21,6 +21,15 @@ execute as @a[scores={stamina=400..1000}] if entity @a[scores={climb=0..0,crouch
 execute as @a[scores={sneaktime=1..}] if entity @a[scores={climb=0..0,crouch=0..0,jump=0..0,dealt=0..0,sprint=0..0,swim=0..0,walkowater=0..0,walk=0..0,walkuwater=0..0}] run scoreboard players add @s stamina 6
 execute as @a[scores={streg=5..5}] run scoreboard players set @s streg 0
 scoreboard players add @a streg 1
+# execute as @a run scoreboard players operation @s treg += @e[name=dmain,type=marker,scores={blockt=0..}] blockt
+scoreboard players add @a treg 2
+execute as @a[scores={treg=240..}] run scoreboard players remove @s thirst 1
+execute as @a[scores={treg=240..,stamina=..500}] run scoreboard players remove @s thirst 1
+execute as @a[scores={treg=240..,stamina=..300}] run scoreboard players remove @s thirst 1
+execute as @a[scores={treg=240..,stamina=..100}] run scoreboard players remove @s thirst 1
+execute as @a[scores={treg=240..,stamina=..400}] run scoreboard players remove @s thirst 1
+execute as @a[scores={treg=240..,stamina=..200}] run scoreboard players remove @s thirst 1
+execute as @a[scores={treg=240..}] run scoreboard players set @s treg -140
 execute as @a[scores={streg1=2..2}] run scoreboard players set @s streg1 0
 # execute as @a[scores={streg1=1..1}] run function world:effects/hotbardisp
 scoreboard objectives setdisplay sidebar.team.aqua thirst
@@ -52,18 +61,6 @@ execute as @a run scoreboard players operation @s stamina -= @s swim
 execute as @a run scoreboard players operation @s stamina -= @s walkowater
 execute as @a run scoreboard players operation @s stamina -= @s walk
 execute as @a run scoreboard players operation @s stamina -= @s walkuwater
-execute as @a[scores={insomnia=25000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={insomnia=35000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={insomnia=45000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={insomnia=55000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={insomnia=65000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={insomnia=75000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={insomnia=85000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={insomnia=95000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={insomnia=105000..,streg1=1..1}] run scoreboard players remove @a stamina 1
-execute as @a[scores={DT=3000..}] run scoreboard players add @s insomnia 1
-execute as @a[scores={DT=5000..}] run scoreboard players add @s insomnia 1
-execute as @a[scores={DT=7000..}] run scoreboard players add @s insomnia 1
 #execute as @a[scores={streg1=0..0}] run scoreboard players operation @s insomniaderp += @s insomnia
 #execute as @a[scores={streg1=1..1}] run scoreboard players operation @s insomniaderp /= @s derp
 #execute as @a[scores={streg1=2..2}] run scoreboard players operation @s stamina -= @s insomniaderp

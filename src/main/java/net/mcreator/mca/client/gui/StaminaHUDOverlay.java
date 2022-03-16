@@ -6,6 +6,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.api.distmarker.Dist;
+
+import net.mcreator.mca.procedures.GetConfigProcedure;
 import net.mcreator.mca.network.McaModVariables;
 
 import net.minecraft.world.level.Level;
@@ -98,14 +100,15 @@ public class StaminaHUDOverlay {
 			dispB = Math.floor(stMain / 100);
 			// McaMod.LOGGER.info((new java.text.DecimalFormat("##.##").format(dispA)));
 			// McaMod.LOGGER.info((new java.text.DecimalFormat("##.##").format(dispB)));
-
-			int i = 0;
-			int posXn = 11;
-			while (i < 10) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation(returnResource(dispA, dispB, i)));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + posXn, posY + intf, 0, 0, 10, 12, 10, 12);
-				posXn = posXn + 8;
-				i = i + 1;
+			if (GetConfigProcedure.enableStamina == 1) {
+				int i = 0;
+				int posXn = 11;
+				while (i < 10) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation(returnResource(dispA, dispB, i)));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + posXn, posY + intf, 0, 0, 10, 12, 10, 12);
+					posXn = posXn + 8;
+					i = i + 1;
+				}
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();

@@ -1,3 +1,0 @@
-
-execute at @s as @e[type=!item,type=!marker,type=!falling_block,distance=0..80,type=!zombie,scores={DB=1..1}] if entity @s[type=!drowned] if entity @s[type=!husk] if entity @s[type=!wither] if entity @s[type=!wither_skeleton] if entity @s[type=!piglin] if entity @s[type=!zombie_villager] run scoreboard players operation @s DT += @e[name=dmain,limit=1] blockta
-execute at @s as @e[type=!item,type=!marker,type=!falling_block,distance=0..80,type=!zombie,scores={DB=1..1,DT=8000..}] if entity @s[type=!drowned] if entity @s[type=!husk] if entity @s[type=!wither] if entity @s[type=!wither_skeleton] if entity @s[type=!piglin] if entity @s[type=!zombie_villager] run scoreboard players set @s DB 2

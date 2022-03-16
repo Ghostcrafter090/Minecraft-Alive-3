@@ -1,3 +1,0 @@
-
-kill @e[type=pig,limit=5,sort=random] 
-say [Minecraft Alive] - Max pig detected. Clearing... 

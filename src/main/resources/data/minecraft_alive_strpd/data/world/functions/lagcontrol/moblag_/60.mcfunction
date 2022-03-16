@@ -1,3 +1,0 @@
-
-kill @e[type=illusioner,limit=5,sort=random] 
-say [Minecraft Alive] - Max illusioner detected. Clearing... 

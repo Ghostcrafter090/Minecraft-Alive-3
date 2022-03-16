@@ -20,9 +20,9 @@ import os
 # <if|unless> block ~ ~ ~ <id>
 # <if|unless> score <tag> <obj> <operator> <tag> <obj>
 # <if|unless> blocks ~ ~ ~ ~ ~ ~ ~ ~ ~ <all|masked>
-# <if|unless> dataOld block ~ ~ ~ <dataOld>
-# <if|unless> dataOld entity <tag> <dataOld>
-# <if|unless> dataOld storage <tag> <dataOld>
+# <if|unless> data block ~ ~ ~ <data>
+# <if|unless> data entity <tag> <data>
+# <if|unless> data storage <tag> <data>
 # <if|unless> predicate <predicate>
 # ;run
 
@@ -46,23 +46,29 @@ exesyn = [
     ["store success entity", 4],
     ["store success score", 2],
     ["store success storage", 4],
-    ["if dataOld block", 4],
-    ["if dataOld entity", 2],
-    ["if dataOld storage", 2],
+    ["if data block", 4],
+    ["if data entity", 2],
+    ["if data storage", 2],
     ["if blocks", 10],
     ["if block", 4],
     ["if entity", 1],
     ["if score", 5],
     ["if predicate", 1],
-    ["unless dataOld block", 4],
-    ["unless dataOld entity", 2],
-    ["unless dataOld storage", 2],
+    ["unless data block", 4],
+    ["unless data entity", 2],
+    ["unless data storage", 2],
     ["unless blocks", 10],
     ["unless entity", 1],
     ["unless block", 4],
     ["unless score", 5],
     ["unless predicate", 1]
 ]
+
+class globals:
+    dataOld = "dataOld"
+    splitter = "_"
+
+errors = []
 
 def dummy(inf):
     dummy = inf
@@ -131,7 +137,7 @@ class util:
 class main:
     def convFuncPath(path):
         print(path)
-        first = path.split("\\dataOld\\")[1].replace("\\", "/")
+        first = path.split("\\" + globals.dataOld + "\\")[1].replace("\\", "/")
         second = first.split("/")[0] + ":" + first.split(first.split("/")[0] + "/")[1]
         out = second[0:(len(second) - len(second.split(".")[-1])) - 1]
         print(out)
@@ -140,6 +146,7 @@ class main:
     def genFileStr(group, sets, path):
         # functions = [[0, <name_0>], [1, <name_1>],..., [n, <name_n>]]
         fileTexts = [""]
+        scores = []
         mainFile = ""
         i = 0
         num = 0
@@ -149,18 +156,60 @@ class main:
                 f = 0
                 if len(group[i][sets[i][n]]) > 1:
                     while f < len(group[i][sets[i][n]]):
-                        fileTexts[num] = fileTexts[num] + "\n" + ("execute " + group[i][sets[i][n]][f]).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ")
+                        cropa = fileTexts[num] + "\n" + ("execute " + group[i][sets[i][n]][f]).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ").replace("execute scoreboard", "scoreboard")
+                        fileTexts[num] = cropa
+                        if cropa.find("tag=!notick") == -1:
+                            if cropa.find("tag=notick") == -1:
+                                fileTexts[num] = cropa.replace("@e[", "@e[tag=!notick,").replace("@e ", "@e[tag=!notick] ")
                         f = f + 1
-                    mainFile = mainFile + "\n" + (sets[i][n] + " run function " + (main.convFuncPath(path).replace(":functions/", ":") + "_") + "/" + str(num)).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ")
+                    cropb = mainFile + "\n" + (sets[i][n] + " run function " + (main.convFuncPath(path).replace(":functions/", ":") + globals.splitter) + "/" + str(num)).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ").replace("execute scoreboard", "scoreboard")
+                    mainFile = cropb
+                    if cropb.find("tag=!notick") == -1:
+                        if cropb.find("tag=notick") == -1:
+                            mainFile = cropb.replace("@e[", "@e[tag=!notick,").replace("@e ", "@e[tag=!notick] ")
                 else:
-                    mainFile = mainFile + "\n" + (sets[i][n] + group[i][sets[i][n]][f]).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ")
+                    cropc = mainFile + "\n" + (sets[i][n] + group[i][sets[i][n]][f]).replace("\n", " ").replace("execute as @s[tag=REPLACEME]  run ", "").replace("execute as @s[tag=REPLACEME] run ", "").replace("  run ", " run ").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ").replace("execute scoreboard", "scoreboard")
+                    mainFile = cropc
+                    if cropc.find("tag=!notick") == -1:
+                        if cropc.find("tag=notick") == -1:
+                            mainFile = cropc.replace("@e[", "@e[tag=!notick,").replace("@e ", "@e[tag=!notick] ")
                     f = 1
                 n = n + 1
-                fileTexts[num] = fileTexts[num].replace("execute run ", "").replace("executerun ", "").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ")
+                cropd = fileTexts[num].replace("execute run ", "").replace("executerun ", "").replace("exefuckute", "execute").replace("execute function ", "function ").replace(" run run ", " run ").replace("execute scoreboard", "scoreboard")
+                fileTexts[num] = cropd
+                if cropd.find("tag=!notick") == -1:
+                    if cropd.find("tag=notick") == -1:
+                        fileTexts[num] = cropd.replace("@e[", "@e[tag=!notick,").replace("@e ", "@e[tag=!notick] ")
+                # print(fileTexts[num].split(" ")[0:3])
+                r = 0
+                fileTexts[num] = fileTexts[num].replace("name=dmain", "tag=dmain").replace("name=derp", "tag=decayPoint")
+                mainFile = mainFile.replace("name=dmain","tag=dmain").replace("name=derp", "tag=decayPoint")
+                fileTextsNum = fileTexts[num]
+                while r < len(fileTexts[num].split("\n")):
+                    if fileTexts[num].split("\n")[r].split(" ")[0:3] == ['scoreboard', 'objectives', 'add']:
+                        scores.append(fileTexts[num].split("\n")[r] + "\n")
+                        print(fileTexts[num].split("\n")[r])
+                        fileTextsNum = fileTextsNum.replace(fileTexts[num].split("\n")[r], "")
+                    if fileTexts[num].split("\n")[r].find("tag=notick") == -1:
+                        if fileTexts[num].split("\n")[r].find("tag=!notick") == -1:
+                            fileTextsNum = "\n" + fileTextsNum.replace(fileTexts[num].split("\n")[r], fileTexts[num].split("\n")[r].replace("@e[", "@e[tag=!notick,").replace("@e ", "@e[tag=!notick] ").replace("@e[tag=!notick,]", "@e[tag=!notick]"))
+                    r = r + 1
+                r = 0
+                mainFileNum = mainFile
+                while r < len(mainFile.split("\n")):
+                    if mainFile.split("\n")[r].split(" ")[0:3] == ['scoreboard', 'objectives', 'add']:
+                        scores.append(mainFile.split("\n")[r] + "\n")
+                        print(mainFile.split("\n")[r])
+                        mainFileNum = mainFileNum.replace(mainFile.split("\n")[r], "")
+                    if mainFile.split("\n")[r].find("tag=notick") == -1:
+                        if mainFile.split("\n")[r].find("tag=!notick") == -1:
+                            mainFileNum = mainFileNum.replace(mainFile.split("\n")[r], mainFile.split("\n")[r].replace("@e[", "@e[tag=!notick,").replace("@e ", "@e[tag=!notick] ").replace("@e[tag=!notick,]", "@e[tag=!notick]"))
+                    r = r + 1
+                fileTexts[num] = fileTextsNum
                 num = num + 1
                 fileTexts.append("")
             i = i + 1
-        return [mainFile, fileTexts]
+        return [mainFile, fileTexts, scores]
 
     def getPatterns(path):
         lines = pytools.IO.getFile(path).split("\n")
@@ -184,27 +233,70 @@ class main:
 
 class files:
     def genStructure(path, fileSets):
-        os.system("mkdir \"" + path.replace("\\dataOld\\", "\\data\\").split(".mcfunction")[0] + "_\"")
-        pytools.IO.saveFile(path.replace("\\dataOld\\", "\\data\\"), fileSets[0])
+        os.system("mkdir \"" + path.replace("\\" + globals.dataOld + "\\", "\\data\\").split(".mcfunction")[0] + globals.splitter + "\"")
+        pytools.IO.saveFile(path.replace("\\" + globals.dataOld + "\\", "\\data\\"), fileSets[0])
         i = 0
         while i < len(fileSets[1]):
             if fileSets[1][i] != "":
-                pytools.IO.saveFile(path.replace("\\dataOld\\", "\\data\\").split(".mcfunction")[0] + "_\\" + str(i) + ".mcfunction", fileSets[1][i])
+                pytools.IO.saveFile(path.replace("\\" + globals.dataOld + "\\", "\\data\\").split(".mcfunction")[0] + globals.splitter + "\\" + str(i) + ".mcfunction", fileSets[1][i])
             i = i + 1
+        load = pytools.IO.getFile("data\\world\\load.mcfunction")
+        # print(load)
+        i = 0
+        while i < len(fileSets[2]):
+            load = load + fileSets[2][i]
+            i = i + 1
+        pytools.IO.saveFile("data\\world\\load.mcfunction", load)
+    
+    def removeDups(path):
+        cont = pytools.IO.getFile(path)
+        contf = cont.split("\n")
+        f = []
+        l = ["null"]
+        i = 0
+        while i < len(contf):
+            if contf[i].find("commands from ") == -1:
+                n = 0
+                yes = 1
+                while n < len(l):
+                    if l[n] == contf[i]:
+                        yes = 0
+                    n = n + 1
+                if yes == 1:            
+                    f.append([contf[i], cont.count(contf[i])])
+                    l.append(contf[i])
+            i = i + 1
+        i = 0
+        string = ""
+        while i < len(f):
+            if f[i][1] > 0:
+                string = string + f[i][0] + "\n"
+            i = i + 1
+        return string
 
 def run(path):
     print(path)
     files.genStructure(path, main.getPatterns(path))
-
+    # pytools.IO.saveFile("data\\world\\load.mcfunction", files.removeDups("data\\world\\load.mcfunction"))
+    
 def runMain():
-    os.system('dir /s /b dataOld\*.mcfunction > mcList.txt')
+    globals.splitter = "." + sys.argv[2]
+    globals.dataOld = sys.argv[1]
+    os.system('dir /s /b ' + globals.dataOld + '\*.mcfunction > mcList.txt')
     fileList = pytools.IO.getFile('mcList.txt').split("\n")
     i = 0
     while i < len(fileList):
         try:
             run(fileList[i])
         except:
-            print("Unexpected error:", sys.exc_info())
+            errors.append(str("Unexpected error at num " + str(i) + " with path of " + str(fileList[i]) + ": " + str(sys.exc_info())))
+            print("Unexpected error at num " + str(i) + " with path of " + str(fileList[i]) + ": ", sys.exc_info())
+        i = i + 1
+    load = pytools.IO.getFile("dataOld\\world\\functions\\load.mcfunction")
+    pytools.IO.saveFile("data\\world\\functions\\load.mcfunction", (load + "\n" + files.removeDups("data\\world\\load.mcfunction").replace("scoreboard player ", "scoreboard players ")).replace("function world:load" + globals.splitter + "/0", "function world:load" + globals.splitter + "/0\n"))
+    i = 0
+    while i < len(errors):
+        print(str(errors[i]))
         i = i + 1
 
 runMain()

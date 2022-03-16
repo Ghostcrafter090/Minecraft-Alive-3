@@ -14,7 +14,7 @@ execute if entity @e[name=dmain,type=marker,scores={atic=1..1}] as @e[type=pigli
 execute if entity @e[name=dmain,type=marker,scores={atic=1..1}] as @e[type=piglin,limit=1,sort=random] at @s unless entity @p[distance=0..20] run data modify entity @s Brain.memories.minecraft:angry_at.value set from entity @e[sort=nearest,limit=1,type=!piglin,type=!marker] UUID
 execute if entity @e[name=dmain,type=marker,scores={atic=1..1}] as @e[type=piglin,limit=1,sort=random] run data merge entity @s {Attributes:[{Name:generic.follow_range,Base:600}]}
 execute if entity @e[name=dmain,type=marker,scores={atic=1..1}] as @e[type=piglin,limit=1,sort=random] run data modify entity @s Brain.memories.minecraft:angry_at.value.ttl set value 600L
-execute as @a at @s unless entity @e[type=marker,tag=portal,distance=0..200] run summon marker ~ ~-20 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Tags:["portal"],CustomName:'{"text":"portal"}'}
+execute as @a[scores={dimension=19..19}] at @s unless entity @e[type=marker,tag=portal,distance=0..200] run summon marker ~ ~-20 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Tags:["portal"],CustomName:'{"text":"portal"}'}
 execute as @e[type=marker,tag=portal,tag=!finished] at @s run spreadplayers ~ ~ 20 200 false @s
 execute as @e[type=marker,tag=portal,tag=!finished] at @s run fill ~4 ~-20 ~4 ~-5 ~-1 ~-4 netherrack replace air
 execute as @e[type=marker,tag=portal,tag=!finished] at @s run fill ~2 ~ ~2 ~-3 ~ ~-2 netherrack replace air

@@ -1,42 +1,7 @@
-# Regulated Code
-execute if entity @a[scores={regulate=1..1}] run function world:mothernature/blockdecay/sec5/parta
-execute if entity @a[scores={regulate=0..0}] run function world:mothernature/blockdecay/sec5/partb
-
-# Unregulated Code
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace oak_slab
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace dark_oak_slab
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace jungle_slab
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace spruce_slab
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace birch_slab
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace acacia_slab
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace oak_slab
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace dark_oak_slab
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace jungle_slab
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace spruce_slab
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace birch_slab
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace acacia_slab
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ terracotta replace brick_slab
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ terracotta replace brick_slab
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace oak_stairs
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace dark_oak_stairs
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace jungle_stairs
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace spruce_stairs
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace birch_stairs
-execute at @e[name=derp] run fill ~ ~-1 ~ ~ ~-1 ~ mca:humus replace acacia_stairs
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace oak_stairs
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace dark_oak_stairs
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace jungle_stairs
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace spruce_stairs
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace birch_stairs
-execute at @e[name=derp] run fill ~ ~-2 ~ ~ ~-2 ~ mca:humus replace acacia_stairs
-scoreboard objectives add td dummy
-scoreboard objectives add sapkill dummy
-scoreboard players add @a sapkill 1
-execute if entity @a[scores={sapkill=500..}] at @a run kill @e[distance=15..,type=item,nbt={Item:{id:"minecraft:oak_sapling",Count:1b}}]
-execute if entity @a[scores={sapkill=500..}] at @a run kill @e[distance=15..,type=item,nbt={Item:{id:"minecraft:dark_oak_sapling",Count:1b}}]
-execute if entity @a[scores={sapkill=500..}] at @a run kill @e[distance=15..,type=item,nbt={Item:{id:"minecraft:acacia_sapling",Count:1b}}]
-execute if entity @a[scores={sapkill=500..}] at @a run kill @e[distance=15..,type=item,nbt={Item:{id:"minecraft:spruce_sapling",Count:1b}}]
-execute if entity @a[scores={sapkill=500..}] at @a run kill @e[distance=15..,type=item,nbt={Item:{id:"minecraft:jungle_sapling",Count:1b}}]
-execute if entity @a[scores={sapkill=500..}] at @a run kill @e[distance=15..,type=item,nbt={Item:{id:"minecraft:birch_sapling",Count:1b}}]
-execute if entity @a[scores={sapkill=500..}] at @a run kill @e[distance=15..,type=item,nbt={Item:{id:"minecraft:stick",Count:1b}}]
-execute if entity @a[scores={sapkill=501..}] run scoreboard players set @a sapkill 0
+execute as @e[name=derp,type=marker,scores={td=1..6}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ grass replace
+execute as @e[name=derp,type=marker,scores={td=7..7}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ fern replace
+execute as @e[name=derp,type=marker,scores={td=8..8}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ large_fern replace
+execute as @e[name=derp,type=marker,scores={td=9..9}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ red_tulip replace
+execute as @e[name=derp,type=marker,scores={td=10..10}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ poppy replace
+execute as @e[name=derp,type=marker,scores={td=11..11}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ dandelion replace
+execute as @e[name=derp,type=marker,scores={td=12..12}] at @s if block ~ ~-1 ~ grass_block run fill ~ ~ ~ ~ ~ ~ allium replace

@@ -1,0 +1,1 @@
+execute if entity @e[type=marker,name=dmain,scores={regu=13..13}] as @e[name=dmain,type=marker] at @s unless entity @e[type=villager,distance=0..20] unless entity @e[type=player,distance=0..20] run function world:mothernature/plants/sec4/main

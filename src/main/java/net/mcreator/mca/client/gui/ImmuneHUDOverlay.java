@@ -6,6 +6,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.api.distmarker.Dist;
+
+import net.mcreator.mca.procedures.GetConfigProcedure;
 import net.mcreator.mca.network.McaModVariables;
 
 import net.minecraft.world.level.Level;
@@ -97,19 +99,21 @@ public class ImmuneHUDOverlay {
 			RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
 					GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 			RenderSystem.setShaderColor(1, 1, 1, 1);
-			if (DB >= 1) {
-				if (true) {
-					RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/caduceus.png"));
-					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -150, posY + intf + intn, 0, 0, 25, 33, 25, 33);
+			if (GetConfigProcedure.enableDisease == 1) {
+				if (DB >= 1) {
+					if (true) {
+						RenderSystem.setShaderTexture(0, new ResourceLocation("mca:textures/caduceus.png"));
+						Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -150, posY + intf + intn, 0, 0, 25, 33, 25, 33);
+					}
+					dispSymptom("blindness", 0, DT, posX, posY + intf + intn, event);
+					dispSymptom("hunger", 1, DT, posX, posY + intf + intn, event);
+					dispSymptom("nausea", 2, DT, posX, posY + intf + intn, event);
+					dispSymptom("slowness", 3, DT, posX, posY + intf + intn, event);
+					dispSymptom("weakness", 4, DT, posX, posY + intf + intn, event);
+					dispSymptom("minfat", 5, DT, posX, posY + intf + intn, event);
+					dispSymptom("poison", 6, DT, posX, posY + intf + intn, event);
+					dispSymptom("wither", 7, DT, posX, posY + intf + intn, event);
 				}
-				dispSymptom("blindness", 0, DT, posX, posY + intf + intn, event);
-				dispSymptom("hunger", 1, DT, posX, posY + intf + intn, event);
-				dispSymptom("nausea", 2, DT, posX, posY + intf + intn, event);
-				dispSymptom("slowness", 3, DT, posX, posY + intf + intn, event);
-				dispSymptom("weakness", 4, DT, posX, posY + intf + intn, event);
-				dispSymptom("minfat", 5, DT, posX, posY + intf + intn, event);
-				dispSymptom("poison", 6, DT, posX, posY + intf + intn, event);
-				dispSymptom("wither", 7, DT, posX, posY + intf + intn, event);
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();

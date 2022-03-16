@@ -1,3 +1,0 @@
-
-kill @e[type=egg,limit=5,sort=random] 
-say [Minecraft Alive] - Max egg detected. Clearing... 
